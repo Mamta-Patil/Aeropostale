@@ -1,0 +1,294 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+li {
+    list-style: none;
+}
+
+#serchbar {
+    height: 25px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-right: 15px;
+    padding-left: 10px;
+}
+#find_product
+{
+    width:90%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding-left: 20px;
+    outline: none;
+}
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    background-color: whitesmoke;
+    z-index: 9999;
+}
+
+.navbar i{
+    font-size: 20px;
+}
+.nav_icons i
+{   
+    font-size: 22px;
+}
+.info {
+    display: none;
+    position: absolute;
+    top: 98%;
+    right:-200%;
+    background-color: #fff;
+    padding: 20px 20px;
+}
+
+.info a {
+    width: 200px;
+    padding: 10px 20px;
+    display: block;
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: #fff;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+.collect_info
+{
+    position: relative;
+}
+.collect_info:hover  .info{
+    display: block;
+}
+
+
+.icons {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.offer {
+    border-radius: 10px;
+}
+
+.btn_1,
+.btn_3,
+.btn_4,
+.btn_5 {
+    height: 30px;
+    border-radius: 25px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+}
+
+.btn_1 a:hover {
+    text-decoration: dotted;
+}
+
+.offer span::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 10px;
+    background-color: #fff;
+    margin-top: 16px;
+    margin-left: -1px;
+}
+.video_conetent
+{
+    position: relative;
+}
+.video_para  {
+    position: absolute;
+    top: 25%;
+    left: 0%;
+}
+
+.video_para p {
+    margin-left: 45%;
+    font-size: 10px;
+}
+
+.first_section .row {
+    background-image: url('assetsvideo/1bg-img.png');
+}
+
+.btn_2 {
+    padding: 5px 20px;
+    background-color: #fff;
+    border-radius: 25px;
+}
+
+.nba_content {
+    text-align: center;
+    padding-top: 15%;
+}
+
+.nba_video {
+    padding: 5%;
+}
+
+.Shorts_jeans .first_div,
+.second_div,
+.beach_vibes .row,
+.skirts_dresses,
+.graphi,
+.cargos,
+.video {
+    height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.Shorts_jeans .first_div {
+    background-image: url('assetsvideo/shorty_story.webp');
+}
+
+.Shorts_jeans .first_para {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.btn_3,
+.btn_4,
+.btn_5 {
+    margin: auto;
+}
+
+.offer1 {
+    margin: 10px 10px;
+}
+
+.offer2 {
+    margin-left: 70%;
+    margin-top: 15%;
+}
+
+.second_div {
+    background-image: url('assetsvideo/denim_daze.webp');
+}
+
+.beach_vibes .row {
+    background-image: url('assetsvideo/beach_vibes.png');
+}
+
+.category .skirts_dresses {
+    background-image: url('assetsvideo/skirts_dresses.webp');
+}
+
+.skirts_dresses_content,
+.cargos_content {
+    padding-top: 45%;
+    text-align: center;
+}
+
+.cargos .cargos_discount {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+}
+
+.category .graphics_video
+{
+    position: relative;
+    
+}
+.category .graphics_content {
+    position: absolute;
+    top: 10%;
+}
+
+.category .cargos {
+    background-image: url('assetsvideo/cargos.webp');
+}
+
+.email {
+    height: 40px;
+    width: 100%;
+    border-radius: 25px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.subscribe_btn {
+    padding: 5px 15px;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    height: 40px;
+    border-radius: 25px;
+    background-color: rgb(54, 96, 213);
+    color: #fff;
+    font-size: 15px;
+}
+
+.icons i {
+    padding-right: 15px;
+}
+
+.beach_vibes_content
+{
+    top: 30%;
+}
+.slidebar
+{
+    height: 100vh;
+    width:50%;
+    background-color: rgb(249, 245, 245);
+    color: #fff;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 10%;
+}
+.user_info a
+{
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 25px;
+    display: block;
+    width: 100%;    
+    margin: 5% 0%;
+    text-align: center;
+}
+
+/* dark mode css */
+.footer a,
+.footer h5,.navbar .nav-link {
+    color: black;
+}
+.offer
+{
+    background-color: black;
+}
+
+.dark {
+    background-color: #222;
+    
+}
+.dark .navbar
+{
+    background-color: #222;
+}
+
+.dark .offer,.dark .offer p 
+{
+    background-color: #fff;
+    color: #222;
+}
+
+.dark .nav-link,
+.dark h5,.dark h3,
+.dark p,.dark i,.dark span{
+    color: #fff;
+}

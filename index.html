@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- style link -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- bootstrap icon link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <div class="navbar position-fixed d-lg-block d-none">
+        <div class="container-fluid">
+            <div class="row w-100 py-3" style="align-items:center;">
+                <div class="col-4 p-0  d-none d-sm-block">
+                    <ul class="d-flex p-0  m-0">
+                        <li class="nav-item " style="list-style: none;"><a href="woman.html"
+                                class="nav-link ps-2 pt-0 ">Woman</a>
+                        </li>
+                        <li class="nav-item" style="list-style: none;"><a href="" class="nav-link ps-2 pt-0 ">Man</a>
+                        </li>
+                        <li class="nav-item" style="list-style: none;"><a href="" class="nav-link ps-2 pt-0">Jeans</a>
+                        </li>
+                        <li class="nav-item" style="list-style: none;"><a href="" class="nav-link ps-2 pt-0">Aero for
+                                all</a>
+                        </li>
+                        <li class="nav-item" style="list-style: none;"><a href=""
+                                class="nav-link ps-2 pt-0">Clearance</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-4 text-center pe-2">
+                    <h3 class="pe-5">Aeropostal</h3>
+                </div>
+                <div class="col-4 d-flex justify-content-end icons pt-2">
+                    <input type="text" name="" id="serchbar">
+                    <ul class="d-flex nav_icons ">
+                        <li><i class="bi bi-search pe-4"></i></li>
+                        <li class="collect_info"><i class="bi bi-person pe-4"></i>
+                            <ul class="info">
+                                <a href="login.html">Create Account</a>
+                                <a href="signin.html" class="mt-2">Sign In</a>
+                            </ul>
+                        </li>
+                        <li>
+                            <i class="bi bi-mask" onclick="Darkmode()"></i>
+                        </li>
+                        <li><a href="cartpage.html"><span class="totalCart">0</span><i
+                                    class="bi bi-bag pe-4 bagIcon"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- navbar for media query -->
+    <section class="navigationbar d-lg-none d-block">
+        <div class="row" style="width: 100%;">
+            <div class="col-2 text-center">
+                <i class="bi bi-list menu" style="font-size: 35px; font-weight: bold;"></i>
+            </div>
+            <div class="col-8 text-center pt-2">
+                <h3>Aeropostal</h3>
+            </div>
+            <div class="col-2 text-center pt-1 p-0">
+                <a href="cartpage.html"><span class="totalCarts">0</span><i class="bi bi-bag bagIcon   text-dark"
+                        style="font-size: 25px;font-weight: bold;"></i></a>
+            </div>
+        </div>
+        <div class="col-12 text-center p-0">
+            <input type="search" id="find_product" placeholder="Search">
+        </div>
+
+        <div class="slidebar">
+            <ul class="ps-3">
+                <li><a href="woman.html" class="nav-link pt-1 ps-0 text-dark">Woman</a></li>
+                <li><a href="" class="nav-link pt-1 ps-0 text-dark">Man</a></li>
+                <li><a href="" class="nav-link pt-1 ps-0 text-dark">Jeans</a></li>
+                <li><a href="" class="nav-link pt-1 ps-0 text-dark">Aero for All </a></li>
+                <li><a href="" class="nav-link pt-1 ps-0 text-dark">Clearance</a></li>
+            </ul>
+            <div class="user_info">
+                <a href="login.html" class="nav-link
+                 text-dark">Create Account</a>
+                <a href="signin.html" class="nav-link text-dark">Sign IN</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- discount section -->
+    <section class="discount">
+        <div class="container-fluid">
+            <div class="row justify-content-evenly">
+                <div class="col-lg-3  d-flex justify-content-between  text-light pt-1 pb-1 offer">
+                    <p class="m-0">NEW SHORTS: <br>
+                        $15 & UP! <span>*</span>
+                    </p>
+                    <button class="btn_1"><a href="" class="nav-link pe-0 text-dark">Woman</a><a href=""
+                            class="nav-link text-dark">Men</a></button>
+                </div>
+                <div class="col-lg-3 d-flex justify-content-between  text-light pt-1 pb-1 offer mt-2 mt-lg-0">
+                    <p class="m-0">JEANS: <br>
+                        50% OFF!<span>*</span>
+                    </p>
+                    <button class="btn_1"><a href="" class="nav-link pe-0 text-dark">Woman</a><a href=""
+                            class="nav-link text-dark">Men</a></button>
+                </div>
+                <div class="col-lg-3 d-flex justify-content-between text-light pt-1 pb-1 offer mt-2 mt-lg-0 ">
+                    <p class="m-0">UP TO 50% OFF: <br>
+                        NEW ARRIWALS<span>*</span>
+                    </p>
+                    <button class="btn_1"><a href="" class="nav-link pe-0 text-dark">Woman</a><a href=""
+                            class="nav-link text-dark">Men</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- video & content -->
+    <section class="video_conetent py-3">
+        <video class="w-100" autoplay controls loop muted>
+            <source src="assetsvideo/price.mp4" type="">
+        </video>
+        <div class="video_para text-center">
+            <img src="assetsvideo/video_content.webp" alt="" class="img-fluid w-50">
+            <P class="d-flex"><a href="" class="text-dark">Women</a><a href="" class="ps-lg-4 ps-2 text-dark">Men</a>
+            </P>
+        </div>
+    </section>
+
+    <!-- nba section -->
+    <section class="first_section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 nba_content">
+                    <img src="assetsvideo/nbalogo.webp" alt="" class="img-fluid w-25">
+                    <p>
+                        Online exclusive. Shop official
+                        Aero NBA gear for all 30 teams - available now!
+                    </p>
+                    <button class="btn_2">Shop Now</button>
+                </div>
+                <div class="col-lg-5 nba_video mt-2 mt-lg-0">
+                    <video autoplay controls loop muted width="100%">
+                        <source src="assetsvideo/nba_video.mp4" type="">
+                    </video>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!--Short story & Denim Daze  -->
+    <section class="Shorts_jeans">
+        <div class="row m-0 py-lg-3">
+            <div class="col-lg-6 p-0 first_div nav-link">
+                <img src="assetsvideo/$15.png" alt="" class="img-fluid w-25 offer1">
+                <div class="first_para text-center">
+                    <img src="assetsvideo/shorty_story_text.webp" alt="" class="img-fluid w-100">
+                    <p style="font-size: 10px;color: #fff; text-align:center;">
+                        Shop your NEW summer loves.
+                    </p>
+                    <button class="btn_3"><a href="" class="nav-link pe-0 text-dark">Woman</a><a href=""
+                            class="nav-link text-dark">Men</a></button>
+                </div>
+            </div>
+            <div class="col-lg-6 p-0 second_div">
+                <img src="assetsvideo/jeans_dis.webp" alt="" class="img-fluid w-25 offer2">
+                <div class="first_para text-center">
+                    <img src="assetsvideo/denim_daze_text.webp" alt="" class="img-fluid w-100">
+                    <p style="font-size: 10px;color: #fff; text-align:center;">
+                        The hottest jeans of the summer. </p>
+                    <button class="btn_3"><a href="" class="nav-link pe-0 text-dark">Woman</a><a href=""
+                            class="nav-link text-dark">Men</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- beach section -->
+    <section class="beach_vibes">
+        <div class="row m-0">
+            <img src="assetsvideo/new_now_dis.webp" alt="" class="beachvibes_discount img-fluid "
+                style="height: 150px; width:160px; ">
+            <div class="beach_vibes_content text-center">
+                <img src="assetsvideo/beach_vibes_text.webp" alt="" class="img-fluid w-50 ">
+                <p class="text-light m-0">Bring the heat in breezy, beach-ready fabrics new arrivals topped with
+                    texture.</p>
+                <button class="btn_4"><a href="" class="nav-link pe-0 text-dark">Woman</a><a href=""
+                        class="nav-link text-dark">Men</a></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <section class="footer py-5">
+        <div class="row m-0">
+            <div class="col-lg-2">
+                <br>
+                <a href="" class="d-flex nav-link ps-0">
+                    <i class="bi bi-geo-alt-fill "></i>
+                    <p class=" ps-3 m-0">Store Locator</p>
+                </a>
+                <a href="" class="d-flex nav-link ps-0">
+                    <i class="bi bi-shop-window "></i>
+                    <p class=" ps-3 m-0">Order Status</p>
+                </a>
+                <a href="" class="d-flex nav-link ps-0">
+                    <i class="bi bi-box-seam "></i>
+                    <p class=" ps-3 m-0">Start a Return</p>
+                </a>
+                <a href="" class="d-flex nav-link  ps-0">
+                    <i class="bi bi-gift "></i>
+                    <p class=" ps-3 m-0">Gift Cards/Balance </p>
+                </a>
+                <a href="" class="d-flex nav-link ps-0">
+                    <i class="bi bi-exclamation-circle "></i>
+                    <p class=" ps-3 m-0">Feedback </p>
+                </a>
+            </div>
+            <div class="col-lg-3 p-lg-0">
+                <h5>Customer Service</h5>
+                <a href="" class="nav-link ps-0  ">Return & Exchange Policy</a>
+                <a href="" class="nav-link ps-0 ">Help desk & FAQ</a>
+                <a href="" class="nav-link ps-0 ">Shiping Policy </a>
+                <a href="" class="nav-link ps-0 ">Buy Online,Pick UP In Store</a>
+                <a href="" class="nav-link ps-0 ">Student Discount</a>
+                <a href="" class="nav-link ps-0 ">Coupons</a>
+                <a href="" class="nav-link ps-0 ">Size Chart</a>
+                <a href="" class="nav-link ps-0 ">Affiliate Program</a>
+                <a href="" class="nav-link ps-0 ">Your Privecy Choice</a>
+            </div>
+            <div class="col-lg-2 p-lg-0">
+                <h5>Questions?</h5>
+                <a href="" class="nav-link ps-0 ">Call US</a>
+                <a href="" class="nav-link ps-0">
+                    <p class="m-0">1.877.289.2376</p>
+
+                </a>
+                <a href="" class="nav-link ps-0 ">Contact Us</a>
+            </div>
+            <div class="col-lg-2 p-lg-0">
+                <h5>About US</h5>
+                <a href="" class="nav-link ps-0 ">About Aeropostale</a>
+                <a href="" class="nav-link ps-0 ">Careers</a>
+                <a href="" class="nav-link ps-0 ">Supply Chain</a>
+                <a href="" class="nav-link ps-0 ">Aero Impact</a>
+            </div>
+            <div class="col-lg-3 p-lg-0 pe-1">
+                <h5>Get The Latest Styles & Offers:
+                </h5>
+                <div class="email_input position-relative">
+                    <input type="text" placeholder="Enter Email" class="email">
+                    <button class="position-absolute subscribe_btn border-1 ">Subscribe</button>
+                </div>
+                <p class="d-flex">For more information, please see our Privacy Policy. California residents, see our <a
+                        href="" class="nav-link">California Privacy Notice.</a> </p>
+                <h5>Follow Us </h5>
+                <div class="icons d-flex">
+                    <a href="">
+                        <i class="bi bi-file-earmark-music"></i>
+                    </a>
+                    <a href=""> <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+                    <a href="">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+
+</body>
+<script>
+
+    // For Cart value
+    function fetchdata() {
+        fetch("http://localhost:3000/cartData")
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data)
+                document.querySelector(".totalCart").innerHTML = data.length
+            })
+            .catch((err) => console.log(err))
+    }
+    fetchdata()
+    //media icon 
+    function Quantity_product() {
+        fetch("http://localhost:3000/cartData")
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data.length)
+                document.querySelector(".totalCarts").innerHTML = data.length
+            })
+            .catch((err) => console.log(err))
+    }
+    Quantity_product()
+
+
+    // // navbar toggle using jquery$
+    // $(document).ready(function () {
+    //     $(".slidebar").hide();
+    //     $(".menu").click(function () {
+    //         $(".slidebar").slideToggle("show")
+    //         // $(".slidebar").fadeOut(2000)
+    //     })
+    // })
+</script>
+
+</html>

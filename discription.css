@@ -1,0 +1,42 @@
+*
+{
+    padding: 0%;
+    margin: 0%;
+}
+.pro_discription{
+    padding-top: 10%;
+}
+.title,.discription,.price
+{
+    padding-left: 10%;
+}
+
+.addCart
+{
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid green;
+    border-radius: 25px;
+    color: green;
+    font-size: 15px;
+}
+.sizeInfo
+{
+    display: flex;
+}
+.sizeInfo span
+{
+height: 35px;
+width: 35px;
+ border: 1px solid black;
+ border-radius: 50%;
+ background-color: lightgrey;
+ columns: darkgrey;
+ margin-left: 5px;
+ text-align: center;
+ align-content: center;
+}
+.sizeInfo a
+{
+    text-decoration: none;
+}
