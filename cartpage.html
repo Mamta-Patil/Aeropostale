@@ -111,8 +111,10 @@
     </section>
 
     <!-- carts added by you -->
+<div class="cart">
     <div id="mainSection">
     </div>
+</div>
 
     <!-- Total price section -->
     <section class="price">
@@ -222,7 +224,7 @@
 </html>
 
 <script>
-
+// Cart
     function Quantity_product() {
         fetch("http://localhost:3000/cartData")
             .then((res) => res.json())
@@ -233,6 +235,8 @@
             .catch((err) => console.log(err))
     }
     Quantity_product()
+
+    // Fetch Data
     function fetchdata() {
         fetch("http://localhost:3000/cartData")
             .then((res) => res.json())
@@ -299,12 +303,11 @@
         document.querySelector(".price").innerHTML = `
         <div class="price">  
 
-        <table style="width: 100%;">
+        <table style="width: 80%;margin:auto">
                         <tr>
-            <td>
-    <p>  Name  </p>
-            </td>
-            <td>
+                         <td>
+                      <p>  Name  </p>      </td>
+                       <td>
     <p>  Price   </p>
             </td>
         </tr>
@@ -316,11 +319,11 @@
                 ${price}
             </td>
         </tr>
-        <tr>
+        <tr style="color:red">
             <td>
             Total Price
             </td>
-             <td>
+             <td style="color:red">
    $${totalprice.toFixed(2)}
             </td>
         </tr>

@@ -16,6 +16,6 @@ signup_form.addEventListener("submit", (e) => {
         alert("Login Successfully")
     }
     else {
-        alert ("incorrect password")
+        alert ("first create your account")
     }
 })

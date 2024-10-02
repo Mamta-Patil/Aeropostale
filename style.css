@@ -11,7 +11,7 @@ li {
     height: 25px;
     border-radius: 10px;
     margin-top: 5px;
-    margin-right: 15px;
+    /* margin-right: 15px; */
     padding-left: 10px;
 }
 #find_product
@@ -34,9 +34,17 @@ li {
 .navbar i{
     font-size: 20px;
 }
+.nav_icons
+{
+    padding-left: 15px;
+}
 .nav_icons i
 {   
     font-size: 22px;
+}
+.bi-mask
+{
+  padding-right: 15px;
 }
 .info {
     display: none;
@@ -68,7 +76,7 @@ li {
 
 
 .icons {
-    font-size: 20px;
+    /* font-size: 20px; */
     font-weight: bold;
 }
 
@@ -234,7 +242,7 @@ li {
 }
 
 .icons i {
-    padding-right: 15px;
+    /* padding-right: 15px; */
 }
 
 .beach_vibes_content

@@ -3,6 +3,7 @@
         width: 55%;
     }
     #mainSection {
+        margin-top: 5%;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         width: 100%;
@@ -29,8 +30,10 @@
 
 }
 
-@media(min-width:576px) and (max-width:778px) {
+@media(min-width:576px) and (max-width:777px) {
     #mainSection {
+        margin-top: 5%;
+
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         width: 100%;
@@ -55,8 +58,10 @@
     
 }
 
-@media(min-width:779px) and (max-width:992px) {
+@media(min-width:778px) and (max-width:991px) {
     #mainSection {
+        margin-top: 5%;
+
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         width: 100%;
@@ -83,10 +88,14 @@
 
 @media(min-width:992px) and (max-width:1200px) {
     #mainSection {
+        margin-top: 15%;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         width: 100%;
     }
+    /* .cart #mainSection
+    {
+    } */
     .bagIcon {
         position: relative;
         top: -1%;
@@ -108,6 +117,7 @@
 
 @media(min-width:1201px) and (max-width:1400px) {
     #mainSection {
+        margin-top: 10%;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         width: 100%;
