@@ -25,8 +25,8 @@
 </head>
 
 <body>
-    <!-- navbar -->
-    <div class="navbar position-fixed d-lg-block d-none">
+       <!-- navbar -->
+       <div class="navbar position-fixed d-lg-block d-none">
         <div class="container-fluid">
             <div class="row w-100 py-3" style="align-items:center;">
                 <div class="col-4 p-0  d-none d-sm-block">
@@ -51,19 +51,19 @@
                 </div>
                 <div class="col-4 d-flex justify-content-end icons pt-2">
                     <input type="text" name="" id="serchbar">
-                    <ul class="d-flex nav_icons justify-content-start ps-0">
+                    <ul class="d-flex nav_icons">
                         <li><i class="bi bi-search "></i></li>
-                        <li class="collect_info"><i class="bi bi-person"></i>  
+                        <li class="collect_info ps-2"><i class="bi bi-person pe-2"></i>  
                             <ul class="info">
                                 <a href="login.html">Create Account</a>
                                 <a href="signin.html" class="mt-2">Sign In</a>
                             </ul>
                         </li>
-                        <li class="pe-4">
-                            <i class="bi bi-mask" onclick="Darkmode()"></i>
+                        <li>
+                            <i class="bi bi-mask ps-2" onclick="Darkmode()"></i>
                         </li>
                         <li><a href="cartpage.html"><span class="totalCart">0</span><i
-                                    class="bi bi-bag ps-4 bagIcon"></i></a></li>
+                                    class="bi bi-bag bagIcon"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -79,8 +79,11 @@
             <div class="col-8 text-center pt-2">
                 <h3>Aeropostal</h3>
             </div>
-            <div class="col-2 text-center pt-1 p-0">
-                <a href="cartpage.html"><span class="totalCarts">0</span><i class="bi bi-bag bagIcon   text-dark"
+            <div class="col-2 text-center pt-1 d-flex justify-content-end">
+                <li class="pt-1">
+                    <i class="bi bi-mask" style="font-size: 22px;font-weight: bold;" onclick="Darkmode()"></i>
+                </li>
+                <a href="cartpage.html"><span class="totalCarts">0</span><i class="bi bi-bag bagIcon  pe-2 text-dark"
                         style="font-size: 25px;font-weight: bold;"></i></a>
             </div>
         </div>
@@ -94,7 +97,7 @@
                 <li><a href="" class="nav-link pt-1 ps-0 text-dark">Man</a></li>
                 <li><a href="" class="nav-link pt-1 ps-0 text-dark">Jeans</a></li>
                 <li><a href="" class="nav-link pt-1 ps-0 text-dark">Aero for All </a></li>
-                <li><a href="" class="nav-link pt-1 ps-0 text-dark">Clearance</a></li>
+                <!-- <li><a href="" class="nav-link pt-1 ps-0 text-dark">Clearance</a></li> -->
             </ul>
             <div class="user_info">
                 <a href="login.html" class="nav-link
@@ -106,23 +109,23 @@
 
     <!-- discount section -->
     <section class="discount">
-        <div class="container-fluid">
-            <div class="row justify-content-evenly">
-                <div class="col-lg-3  d-flex justify-content-between  text-light pt-1 pb-1 offer">
+        <div class="container-fluid mt-lg-5">
+            <div class="row justify-content-evenly mt-lg-5">
+                <div class="col-xl-3 d-flex justify-content-between  text-light pt-1 pb-1 offer">
                     <p class="m-0">NEW SHORTS: <br>
                         $15 & UP! <span>*</span>
                     </p>
                     <button class="btn_1"><a href="" class="nav-link pe-0 text-dark">Woman</a><a href=""
                             class="nav-link text-dark">Men</a></button>
                 </div>
-                <div class="col-lg-3 d-flex justify-content-between  text-light pt-1 pb-1 offer mt-2 mt-lg-0">
+                <div class="col-xl-3  d-flex justify-content-between  text-light pt-1 pb-1 offer mt-2 mt-lg-1">
                     <p class="m-0">JEANS: <br>
                         50% OFF!<span>*</span>
                     </p>
                     <button class="btn_1"><a href="" class="nav-link pe-0 text-dark">Woman</a><a href=""
                             class="nav-link text-dark">Men</a></button>
                 </div>
-                <div class="col-lg-3 d-flex justify-content-between text-light pt-1 pb-1 offer mt-2 mt-lg-0 ">
+                <div class="col-xl-3 d-flex justify-content-between text-light pt-1 pb-1 offer mt-2 mt-lg-1">
                     <p class="m-0">UP TO 50% OFF: <br>
                         NEW ARRIWALS<span>*</span>
                     </p>

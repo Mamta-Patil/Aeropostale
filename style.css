@@ -49,6 +49,7 @@ li {
 .info {
     display: none;
     position: absolute;
+    z-index: 999;
     top: 98%;
     right:-200%;
     background-color: #fff;
@@ -69,6 +70,8 @@ li {
 .collect_info
 {
     position: relative;
+    /* z-index: -1; */
+
 }
 .collect_info:hover  .info{
     display: block;
@@ -300,3 +303,21 @@ li {
 .dark p,.dark i,.dark span{
     color: #fff;
 }
+/* Estimated Table */
+.Estimated
+{
+    /* background-color: aqua; */
+}
+table
+{
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    margin-top: 5%;
+}
+table td
+{
+    padding: 10px 0px;
+    height: 20px;
+}
+
+

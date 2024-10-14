@@ -8,17 +8,25 @@
         grid-template-columns: repeat(1, 1fr);
         width: 100%;
     }
-
+    .product_data
+    {
+        margin-top: 5%;
+        /* z-index: -1; */
+    }
+    .women_pro
+    {
+       margin-top: 20%;
+    }
     .bagIcon {
         position: relative;
         top: -1%;
-        left: 15%;
+        left: 0%;
         color: black;
     }
 
     .totalCart,.totalCarts{
         position: absolute;
-        right:7.2%;
+        right:7%;
         padding-top: 9px;
         color: black;
     }
@@ -33,12 +41,14 @@
 @media(min-width:576px) and (max-width:777px) {
     #mainSection {
         margin-top: 5%;
-
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         width: 100%;
     }
-
+    .product_data
+    {
+        margin-top: 5%;
+    }
     .bagIcon {
         position: relative;
         top: -1%;
@@ -48,7 +58,7 @@
 
     .totalCart,.totalCarts{
         position: absolute;
-        right:7.2%;
+        right:5%;
         padding-top: 9px;
         color: black;
     }
@@ -61,11 +71,14 @@
 @media(min-width:778px) and (max-width:991px) {
     #mainSection {
         margin-top: 5%;
-
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         width: 100%;
     }
+    .product_data
+{
+    margin-top: 5%;
+}
     .bagIcon {
         position: relative;
         top: -1%;
@@ -75,7 +88,7 @@
 
     .totalCart,.totalCarts{
         position: absolute;
-        right:6.6%;
+        right:3.8%;
         padding-top: 9px;
         color: black;
     }
@@ -93,9 +106,10 @@
         grid-template-columns: repeat(4, 1fr);
         width: 100%;
     }
-    /* .cart #mainSection
+    .product_data
     {
-    } */
+        margin-top: 15%;
+    }
     .bagIcon {
         position: relative;
         top: -1%;
@@ -110,7 +124,7 @@
         color: black;
     }
     .discount {
-        margin-top: 9%;
+        margin-top: 12%;
     }
     
 }
@@ -122,16 +136,20 @@
         grid-template-columns: repeat(4, 1fr);
         width: 100%;
     }
+    .product_data
+    {
+        margin-top: 10%;
+    }
     .bagIcon {
         position: relative;
         top: -1%;
-        left: 15%;
+        left: 0%;
         color: black;
     }
 
     .totalCart,.totalCarts{
         position: absolute;
-        right:4.6%;
+        right:3.5%;
         padding-top: 4px;
         color: black;
     }

@@ -29,17 +29,16 @@
 
 <body>
 
-
     <!-- navbar -->
     <div class="navbar position-fixed d-lg-block d-none">
         <div class="container-fluid">
             <div class="row w-100 py-3" style="align-items:center;">
                 <div class="col-4 p-0  d-none d-sm-block">
-                    <ul class="d-flex p-0 text-dark m-0">
+                    <ul class="d-flex p-0  m-0">
                         <li class="nav-item " style="list-style: none;"><a href="woman.html"
-                                class="nav-link ps-2 pt-0">Woman</a>
+                                class="nav-link ps-2 pt-0 ">Woman</a>
                         </li>
-                        <li class="nav-item" style="list-style: none;"><a href="" class="nav-link ps-2 pt-0">Man</a>
+                        <li class="nav-item" style="list-style: none;"><a href="" class="nav-link ps-2 pt-0 ">Man</a>
                         </li>
                         <li class="nav-item" style="list-style: none;"><a href="" class="nav-link ps-2 pt-0">Jeans</a>
                         </li>
@@ -47,7 +46,7 @@
                                 all</a>
                         </li>
                         <li class="nav-item" style="list-style: none;"><a href=""
-                                class="nav-link ps-2 pt-0">Clearance</a>
+                                class="nav-link ps-2 pt-0 d-none">Clearance</a>
                         </li>
                     </ul>
                 </div>
@@ -56,20 +55,19 @@
                 </div>
                 <div class="col-4 d-flex justify-content-end icons pt-2">
                     <input type="text" name="" id="serchbar">
-                    <ul class="d-flex nav_icons ">
-                        <li><i class="bi bi-search pe-4"></i></li>
-                        <li class="collect_info"><i class="bi bi-person pe-4"></i>
+                    <ul class="d-flex nav_icons">
+                        <li><i class="bi bi-search "></i></li>
+                        <li class="collect_info ps-2"><i class="bi bi-person pe-2"></i>  
                             <ul class="info">
                                 <a href="login.html">Create Account</a>
                                 <a href="signin.html" class="mt-2">Sign In</a>
                             </ul>
                         </li>
                         <li>
-                            <i class="bi bi-mask" onclick="Darkmode()"></i>
+                            <i class="bi bi-mask ps-2" onclick="Darkmode()"></i>
                         </li>
-
                         <li><a href="cartpage.html"><span class="totalCart">0</span><i
-                                    class="bi bi-bag pe-4 bagIcon"></i></a></li>
+                                    class="bi bi-bag bagIcon"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -85,7 +83,10 @@
             <div class="col-8 text-center pt-2">
                 <h3>Aeropostal</h3>
             </div>
-            <div class="col-2 text-center pt-1 p-0">
+            <div class="col-2 text-center pt-1 d-flex justify-content-end">
+                <li class="pt-1">
+                    <i class="bi bi-mask" style="font-size: 22px;font-weight: bold;" onclick="Darkmode()"></i>
+                </li>
                 <a href="cartpage.html"><span class="totalCarts">0</span><i class="bi bi-bag bagIcon   text-dark"
                         style="font-size: 25px;font-weight: bold;"></i></a>
             </div>
@@ -100,7 +101,7 @@
                 <li><a href="" class="nav-link pt-1 ps-0 text-dark">Man</a></li>
                 <li><a href="" class="nav-link pt-1 ps-0 text-dark">Jeans</a></li>
                 <li><a href="" class="nav-link pt-1 ps-0 text-dark">Aero for All </a></li>
-                <li><a href="" class="nav-link pt-1 ps-0 text-dark">Clearance</a></li>
+                <li><a href="" class="nav-link pt-1 ps-0 text-dark d-none">Clearance</a></li>
             </ul>
             <div class="user_info">
                 <a href="login.html" class="nav-link
@@ -111,25 +112,38 @@
     </section>
 
     <!-- carts added by you -->
-<div class="cart">
-    <div id="mainSection">
+    <div class="cart">
+        <div id="mainSection">
+        </div>
     </div>
-</div>
 
     <!-- Total price section -->
-    <section class="price">
+    <!-- <section class="price">
         <tabel>
             <tr>
                 <td>${item.title}</td>
                 <td>${item.price}</td>
             </tr>
             <tr>
-                <td>   Total Price:$${totalprice.toFixed(2)}    </td>
+                <td> Total Price:$${totalprice.toFixed(2)} </td>
             </tr>
         </tabel>
-    </section>
+    </section> -->
 
 
+    <div class="">
+        <div class="price">
+            <tabel>
+                <!-- <tr>
+                    <td>${item.title}</td>
+                    <td>${item.price}</td>
+                </tr>
+                <tr>
+                    <td> Total Price:$${totalprice.toFixed(2)} </td>
+                </tr> -->
+            </tabel>
+        </div>
+    </div>
 
     <!-- footer -->
 
@@ -224,7 +238,7 @@
 </html>
 
 <script>
-// Cart
+    // Cart
     function Quantity_product() {
         fetch("http://localhost:3000/cartData")
             .then((res) => res.json())
@@ -286,7 +300,7 @@
         })
             .then((res) => res.json())
             .then((data) => {
-                alert("data deleted scucceessfully")
+                alert("Remove Product?  Are you sure you want to remove this product from your shopping bag? ")
                 fetchdata()
             })
             .catch((err) => console.log(err))
@@ -296,37 +310,58 @@
     // calculate total price
     function calculateTotalPrice(data) {
         let totalprice = data.reduce((acc, item) => acc + parseFloat(item.price), 0)
-        let title=data.map((item)=>item.discription + `<br />` ).join("")
-        let price=data.map((item)=>`$`+ parseFloat(item.price)+`<br />`).join("")
+        let title = data.map((item) => item.discription + `<br />`).join("")
+        let price = data.map((item) => `$` + parseFloat(item.price) + `<br />`).join("")
         console.log(title)
         console.log(price)
         document.querySelector(".price").innerHTML = `
-        <div class="price">  
+        <div class="price col-lg-4 ms-lg-5 mt-lg-5">  
+        <table style="margin:auto;background-Color:#F5F5F7 " class="Estimated">
+              <tr style="">
+                <td class="p-2">
+                  <h6 class="m-0">Order Summary</h6>                  
+                </td>
+              </tr>
+              <tr style="">
+                <td class="p-2 pe-0">
+                    <hr  class="m-0 w-100" />   
+    
+                    <p class="m-0">  Name  </p>  
+                    <hr  class="m-0 w-100" />   
 
-        <table style="width: 80%;margin:auto">
-                        <tr>
-                         <td>
-                      <p>  Name  </p>      </td>
-                       <td>
-    <p>  Price   </p>
-            </td>
-        </tr>
-            <tr>
-            <td>
-                ${title}
-            </td>
-            <td>
-                ${price}
-            </td>
-        </tr>
-        <tr style="color:red">
-            <td>
-            Total Price
-            </td>
-             <td style="color:red">
-   $${totalprice.toFixed(2)}
-            </td>
-        </tr>
+                 </td>
+                 <td class="p-2 ps-0">
+                    <hr  class="m-0 w-100" />   
+
+                    <p class="m-0">  Price   </p>
+                    <hr  class="m-0 w-100" />   
+
+                 </td>
+                 
+              </tr>
+              <tr style="">
+                <td class="p-2">
+                   ${title}
+                </td>
+                <td class="p-2">
+                   ${price}
+                </td>
+              </tr>
+              <tr style="color:red">
+                <td class="p-2">
+                    <hr  class="m-0 w-100 pe-0" />   
+                     Estimated Total
+                    <hr  class="m-0 w-100 pe-0" />   
+                </td>
+                <td style="color:red" class="p-2">
+                    <hr  class="m-0 w-100 ps-0" />   
+                $${totalprice.toFixed(2)}
+                    <hr  class="m-0 w-100 ps-0" />   
+                </td>
+              </tr>
+              <tr style="">
+                <td class="p-2">4 interest-free payments of $18.72 with Klarna. Learn More </td>    
+              </tr>
     </table>
         </div>
     `

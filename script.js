@@ -23,7 +23,7 @@ function singledata(id,image1, title, discription, price) {
     <a href="discription.html?title=${encodeURIComponent(title)}&image1=${encodeURIComponent(image1[0])}&image2=${encodeURIComponent(image1[1])}&image3=${encodeURIComponent(image1[2])}&image4=${encodeURIComponent(image1[3])}&price=${encodeURIComponent(price)}&discription=${encodeURIComponent(discription)}" class="nav-link p-0"> 
     <div class="card" data-id="${id}">
     <div class="card-image">
-        <img src="${image1}" alt="" width="100%">
+        <img src="${image1}" alt="" width="100%" class="img1>
     </div>
     <div class="card-body">
         <p class="card-title">${title}</p>

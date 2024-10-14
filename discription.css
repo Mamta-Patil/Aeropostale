@@ -9,6 +9,7 @@
 .title,.discription,.price
 {
     padding-left: 10%;
+    /* padding-left: 20px; */
 }
 
 .addCart
@@ -39,4 +40,8 @@ width: 35px;
 .sizeInfo a
 {
     text-decoration: none;
+}
+.product_data
+{
+    margin-top: 10%;
 }
