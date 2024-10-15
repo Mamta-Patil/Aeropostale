@@ -62,6 +62,8 @@ li {
 } */
 .card {
     margin: 2px 10px;
+    background-color: aqua;
+    /* display: flex; */
 }
 
 .card-title {
@@ -72,7 +74,7 @@ li {
 }
 .card-body
 {
-    height: 200px;
+    height: 200px;  
 }
 .soart-product
 {  

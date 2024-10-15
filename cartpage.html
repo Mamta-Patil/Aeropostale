@@ -57,7 +57,7 @@
                     <input type="text" name="" id="serchbar">
                     <ul class="d-flex nav_icons">
                         <li><i class="bi bi-search "></i></li>
-                        <li class="collect_info ps-2"><i class="bi bi-person pe-2"></i>  
+                        <li class="collect_info ps-2"><i class="bi bi-person pe-2"></i>
                             <ul class="info">
                                 <a href="login.html">Create Account</a>
                                 <a href="signin.html" class="mt-2">Sign In</a>
@@ -111,39 +111,32 @@
         </div>
     </section>
 
-    <!-- carts added by you -->
-    <div class="cart">
-        <div id="mainSection">
+
+
+
+    <div class="row m-0">
+        <h4>Shopping Bag 
+            <span class="bag"></span>
+             </h4>
+
+        <div class="col-lg-8 CartSection">
+            <!-- <div class="row">
+                <div class="col-3">
+                    <img src="assetsvideo/beach_vibes.png" alt="" height="100px" width="100px">
+                </div>
+                <div class="col-9">
+                    <p>jopkjd</p>
+                    <p>hejofwk Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptatem, odit ut perferendis debitis ipsam asperiores quisquam commodi illum in aperiam cupiditate sequi nihil dolor nesciunt voluptatum delectus, dolorum magni?</p>
+                    <p>$9000</p>
+                    <button>Delet</button>
+                </div>
+            </div> -->
+        </div>
+        <div class="col-lg-4 col-12 price">
+            
         </div>
     </div>
 
-    <!-- Total price section -->
-    <!-- <section class="price">
-        <tabel>
-            <tr>
-                <td>${item.title}</td>
-                <td>${item.price}</td>
-            </tr>
-            <tr>
-                <td> Total Price:$${totalprice.toFixed(2)} </td>
-            </tr>
-        </tabel>
-    </section> -->
-
-
-    <div class="">
-        <div class="price">
-            <tabel>
-                <!-- <tr>
-                    <td>${item.title}</td>
-                    <td>${item.price}</td>
-                </tr>
-                <tr>
-                    <td> Total Price:$${totalprice.toFixed(2)} </td>
-                </tr> -->
-            </tabel>
-        </div>
-    </div>
 
     <!-- footer -->
 
@@ -212,24 +205,37 @@
                 <h5>Follow Us </h5>
                 <div class="icons d-flex">
                     <a href="">
-                        <i class="bi bi-file-earmark-music"></i>
+                        <i class="bi bi-file-earmark-music p-0"></i>
                     </a>
-                    <a href=""> <i class="bi bi-instagram"></i>
-                    </a>
-                    <a href="">
-                        <i class="bi bi-facebook"></i>
+                    <a href=""> <i class="bi bi-instagram ps-2"></i>
                     </a>
                     <a href="">
-                        <i class="bi bi-twitter-x"></i>
+                        <i class="bi bi-facebook ps-2"></i>
                     </a>
                     <a href="">
-                        <i class="bi bi-youtube"></i>
+                        <i class="bi bi-twitter-x ps-2"></i>
+                    </a>
+                    <a href="">
+                        <i class="bi bi-youtube ps-2"></i>
                     </a>
 
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- <div class="row  m-0" data-id="${id}">
+        <div class=" col-4 bg-success">
+            <img src="${Image1}" alt="" width="100px" width:"100px">
+        </div>
+        <div class=" col-6 bg-danger m-0">
+            <p class="">${title}</p>
+            <p class="">${discription}</p>
+            <p class="">$${price}</p>
+            <button class="deleteButton btn btn-dark" data-id="${id}">DELETE CART</button>
+        </div>
+        </div>   -->
+    
 
     <script src="script.js"></script>
 
@@ -245,6 +251,8 @@
             .then((data) => {
                 console.log(data.length)
                 document.querySelector(".totalCarts").innerHTML = data.length
+                document.querySelector(".bag").innerHTML = data.length
+
             })
             .catch((err) => console.log(err))
     }
@@ -265,22 +273,22 @@
 
     function datalist(data) {
         let storedata = data.map((el) => singledata(el.Image1, el.id, el.title, el.discription, el.price))
-        document.querySelector("#mainSection").innerHTML = storedata.join("")
+        document.querySelector(".CartSection").innerHTML = storedata.join("")
     }
 
     function singledata(Image1, id, title, discription, price) {
         let data = `
-    <div class="card" data-id="${id}">
-    <div class="card-image">
-        <img src="${Image1}" alt="" width="100%">
-    </div>
-    <div class="card-body">
-        <p class="card-title">${title}</p>
-        <p class="card-discription">${discription}</p>
-        <p class="card-price">$${price}</p>
-        <button class="deleteButton btn btn-dark" data-id="${id}">DELETE CART</button>
-    </div>
-    </div>  
+            <div class="row  addPro" data-id="${id}">
+                <div class=" col-4 text-center">
+                    <img src="${Image1}" alt="" height="150px" width:"150px" class="pt-3">
+                </div>
+                <div class=" col-8 m-0">
+                    <p class="">${title}</p>
+                    <p class="">${discription}</p>
+                    <p class="">$${price}</p>
+                    <button class="deleteButton mb-2 btn btn-dark" data-id="${id}">DELETE CART</button>
+                </div>
+            </div>  
     `
         return data;
     }
@@ -315,17 +323,16 @@
         console.log(title)
         console.log(price)
         document.querySelector(".price").innerHTML = `
-        <div class="price col-lg-4 ms-lg-5 mt-lg-5">  
-        <table style="margin:auto;background-Color:#F5F5F7 " class="Estimated">
-              <tr style="">
+        <div class="price col-l2">  
+        <table style="margin:auto;" class="Estimated">
+               <tr style="">
                 <td class="p-2">
                   <h6 class="m-0">Order Summary</h6>                  
                 </td>
               </tr>
               <tr style="">
                 <td class="p-2 pe-0">
-                    <hr  class="m-0 w-100" />   
-    
+                    <hr  class="m-0 w-100" />      
                     <p class="m-0">  Name  </p>  
                     <hr  class="m-0 w-100" />   
 
