@@ -130,8 +130,8 @@
 }
 
 @media(min-width:1201px) and (max-width:1400px) {
-    #mainSection {
-        margin-top: 12%;
+    #mainSection,#mainSectionmen {
+        margin-top: 17%;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         width: 100%;

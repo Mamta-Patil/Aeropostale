@@ -17,13 +17,12 @@ function datalist(data) {
         singledata(el.id,el.image1, el.title, el.discription, el.price))
     mainSection.innerHTML = store.join("")
 }
-
 function singledata(id,image1, title, discription, price) {
     let data = `   
     <a href="discription.html?title=${encodeURIComponent(title)}&image1=${encodeURIComponent(image1[0])}&image2=${encodeURIComponent(image1[1])}&image3=${encodeURIComponent(image1[2])}&image4=${encodeURIComponent(image1[3])}&price=${encodeURIComponent(price)}&discription=${encodeURIComponent(discription)}" class="nav-link p-0"> 
     <div class="card" data-id="${id}">
     <div class="card-image">
-        <img src="${image1}" alt="" width="100%" class="img1>
+        <img src="${image1}" alt="" width="100%" class="img1">
     </div>
     <div class="card-body">
         <p class="card-title">${title}</p>
@@ -32,10 +31,60 @@ function singledata(id,image1, title, discription, price) {
     </div>
     </div>  
 </a>
+
     `
     
     return data;
 }
+
+
+// men
+let mainSectionmen = document.querySelector("#mainSectionmen");
+let productdatamen = []
+function fetchdatamen() {
+    fetch("http://localhost:3000/menData")
+        .then((res) => res.json())
+        .then((data) => {
+            datalistmen(data)
+            productdatamen=data
+            console.log(data)
+        })
+        .catch((err) => console.log(err))
+}
+fetchdatamen()
+function datalistmen(data) {
+    console.log("hello");
+    let store = data.map((el) =>
+        singledatamen(el.id,el.image1, el.title, el.discription, el.price))
+    mainSectionmen.innerHTML = store.join("")
+}
+
+
+
+
+// 
+
+function singledatamen(id,image1, title, discription, price) {
+    let data = `   
+    <a href="discription.html?title=${encodeURIComponent(title)}&image1=${encodeURIComponent(image1[0])}&image2=${encodeURIComponent(image1[1])}&image3=${encodeURIComponent(image1[2])}&image4=${encodeURIComponent(image1[3])}&price=${encodeURIComponent(price)}&discription=${encodeURIComponent(discription)}" class="nav-link p-0"> 
+    <div class="card" data-id="${id}">
+    <div class="card-image">
+        <img src="${image1}" alt="" width="100%" class="img1">
+    </div>
+    <div class="card-body">
+        <p class="card-title">${title}</p>
+        <p class="card-discription">${discription}</p>
+        <p class="card-price">$${price}</p>
+    </div>
+    </div>  
+</a>
+
+    `
+    
+    return data;
+}
+
+
 
 
 // navbar toggle using jquery$

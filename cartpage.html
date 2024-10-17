@@ -24,7 +24,19 @@
     <!-- jquery cdn -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        
+   <!-- toaster js link      -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+   <style>
+    .bag_info
+    {
+       
+padding-left: 20%;
+    }
+   </style>
+   
 </head>
 
 <body>
@@ -113,12 +125,16 @@
 
 
 
+    <!-- carts added by you -->
+    <div class="cart">
+        <div id="mainSection">
+        </div>
+    </div>
 
     <div class="row m-0">
-        <h4>Shopping Bag 
-            <span class="bag"></span>
-             </h4>
-
+        <p>Shopping Bag  </p>
+        <h4 class="bag_info"></h4>
+        <button class="shoping_btn"></button>
         <div class="col-lg-8 CartSection">
             <!-- <div class="row">
                 <div class="col-3">
@@ -137,6 +153,14 @@
         </div>
     </div>
 
+
+
+    <!-- <div class=""> -->
+        <!-- <div class="price"> -->
+            <!-- <tabel> -->
+            <!-- </tabel> -->
+        <!-- </div> -->
+    <!-- </div> -->
 
     <!-- footer -->
 
@@ -251,8 +275,15 @@
             .then((data) => {
                 console.log(data.length)
                 document.querySelector(".totalCarts").innerHTML = data.length
-                document.querySelector(".bag").innerHTML = data.length
-
+                if(data.length===0)
+            {
+                document.querySelector(".bag_info").innerHTML="your shoping bag is empty"
+                document.querySelector(".shoping_btn").innerHTML="your shoping bag is empty"
+            }
+            else
+            {
+                console.log(err)
+            }
             })
             .catch((err) => console.log(err))
     }
@@ -286,7 +317,7 @@
                     <p class="">${title}</p>
                     <p class="">${discription}</p>
                     <p class="">$${price}</p>
-                    <button class="deleteButton mb-2 btn btn-dark" data-id="${id}">DELETE CART</button>
+                    <i class="deleteButton bi bi-trash " data-id="${id}"></i>
                 </div>
             </div>  
     `
@@ -302,14 +333,17 @@
         }
     })
 
+    
     function Deleteproduct(id) {
         fetch(`http://localhost:3000/cartData/${id}`, {
             "method": "DELETE"
         })
             .then((res) => res.json())
             .then((data) => {
+                
                 alert("Remove Product?  Are you sure you want to remove this product from your shopping bag? ")
-                fetchdata()
+                // fetchdata()
+                toasterFun() 
             })
             .catch((err) => console.log(err))
     }

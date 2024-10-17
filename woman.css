@@ -2,6 +2,10 @@
     margin: 0%;
     padding: 0%;
 }
+a
+{
+    pointer-events: auto;
+}
 
 li {
     list-style: none;
@@ -69,18 +73,23 @@ li {
 .card-title {
     color: red;
 }
+/* .card-body
+{
+    height: 200px;
+    background-color: aqua;
+} */
 .card-discription,.card-price{
     color:black;
 }
-.card-body
+/* .card-body
 {
-    height: 200px;  
-}
+    height: 250px;  
+} */
 .soart-product
 {  
     width: 100%;
     position: absolute;
-    top: 22%;
+    top: 21%;
 }
 .soart-box
 {
@@ -89,6 +98,7 @@ li {
     border-radius: 5px;
     margin-right: 2%;
     padding: 10px;
+    z-index: 10;
 }
 .soart-btn a
 {
@@ -101,12 +111,32 @@ li {
 .soart-btn
 {
     padding: 10px;
+    margin-bottom: 2%;
+
+    
 }
 .dark .card{
     background-color: black;
 }
+.soart-by
+{
+    text-align: center;
+}
+.soart-by button
+{
+    padding: 10px 35px;
+    border: 2px solid black;    
+    border-radius:25px;
+    background-color: #fff;
+    margin:2% auto;
+}
 
-
+/*  */
+.women_pro #mainSection,#mainSectionmen
+{
+    /* position: relative;
+    z-index: -1; */
+}
 
 /* hover on image */
 .card-image .img1:hover .img1
