@@ -2,45 +2,34 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cartpage</title>
-    <!-- Bootstrap link -->
+    <title>Login Form</title>
+
+    <!-- css link -->
+    <link rel="stylesheet" href="/STYLE/login.css">
+    <link rel="stylesheet" href="/STYLE/style.css">
+    <link rel="stylesheet" href="/STYLE/media.css">
+
+    <!-- Botstrap link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
-    <!-- bootstrap icon link -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-    <!-- css link -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="media.css">
-    <link rel="stylesheet" href="woman.css">
-
     <!-- jquery cdn -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-        
-   <!-- toaster js link      -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-   <style>
-    .bag_info
-    {
-       
-padding-left: 20%;
-    }
-   </style>
-   
+
+    <!-- bootstrap icon link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
 </head>
 
 <body>
-
     <!-- navbar -->
     <div class="navbar position-fixed d-lg-block d-none">
         <div class="container-fluid">
@@ -85,7 +74,6 @@ padding-left: 20%;
             </div>
         </div>
     </div>
-
     <!-- navbar for media query -->
     <section class="navigationbar d-lg-none d-block">
         <div class="row" style="width: 100%;">
@@ -99,7 +87,7 @@ padding-left: 20%;
                 <li class="pt-1">
                     <i class="bi bi-mask" style="font-size: 22px;font-weight: bold;" onclick="Darkmode()"></i>
                 </li>
-                <a href="cartpage.html"><span class="totalCarts">0</span><i class="bi bi-bag bagIcon   text-dark"
+                <a href="cartpage.html"><span class="totalCarts">0</span><i class="bagIcon bi bi-bag    text-dark"
                         style="font-size: 25px;font-weight: bold;"></i></a>
             </div>
         </div>
@@ -113,7 +101,7 @@ padding-left: 20%;
                 <li><a href="" class="nav-link pt-1 ps-0 text-dark">Man</a></li>
                 <li><a href="" class="nav-link pt-1 ps-0 text-dark">Jeans</a></li>
                 <li><a href="" class="nav-link pt-1 ps-0 text-dark">Aero for All </a></li>
-                <li><a href="" class="nav-link pt-1 ps-0 text-dark d-none">Clearance</a></li>
+                <li><a href="" class="nav-link pt-1 ps-0 text-dark">Clearance</a></li>
             </ul>
             <div class="user_info">
                 <a href="login.html" class="nav-link
@@ -123,47 +111,41 @@ padding-left: 20%;
         </div>
     </section>
 
+    <!-- Form Section -->
+    <section class="main">
+        <div class="row m-0">
+            <div class="col-lg-6 m-auto" id="login_form">
+                <form action="" id="login-form">
+                    <h3>Create Account</h3>
+                    <input type="text" placeholder="First Name" class="input" id="firstName"><br>
+                    <span id="firstNameError"></span><br>
+                    <input type="text" placeholder="Last Name" class="input" id="lastName"><br>
+                    <span id="lastNameError"></span><br>
+                    <input type="text" placeholder="Phone" class="input" id="phoneNo"> <br>
+                    <span id="phoneNoError"></span><br>
+                    <input type="email" placeholder="Email" class="input" id="email"><br>
+                    <span id="emailError"></span><br>
+                    <input type="email" placeholder="Confirm Email" class="input" id="confEmail"> <br>
+                    <span id="confEmailError"></span><br>
+                    <input type="password" placeholder="password" class="input" id="password"><br>
+                    <span id="PasswordError"></span><br>
+                    <input type="password" placeholder="Confirm password" class="input" id="conPassword"><br>
+                    <span id="conPasswordError"></span><br>
 
-
-    <!-- carts added by you -->
-    <div class="cart">
-        <div id="mainSection">
+                    <div class="checkbox_content d-flex mt-4">
+                        <input type="checkbox" width="50%" class="checkbox">
+                        <p class="ps-2">Please add me to Aeropostale's email list. Aeropostale does not share or sell
+                            personal info.
+                        </p>
+                    </div>
+                    <button class="btn btn-success w-25 m-auto">Apply</button>
+                </form>
+            </div>
         </div>
-    </div>
 
-    <div class="row m-0">
-        <p>Shopping Bag  </p>
-        <h4 class="bag_info"></h4>
-        <button class="shoping_btn"></button>
-        <div class="col-lg-8 CartSection">
-            <!-- <div class="row">
-                <div class="col-3">
-                    <img src="assetsvideo/beach_vibes.png" alt="" height="100px" width="100px">
-                </div>
-                <div class="col-9">
-                    <p>jopkjd</p>
-                    <p>hejofwk Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptatem, odit ut perferendis debitis ipsam asperiores quisquam commodi illum in aperiam cupiditate sequi nihil dolor nesciunt voluptatum delectus, dolorum magni?</p>
-                    <p>$9000</p>
-                    <button>Delet</button>
-                </div>
-            </div> -->
-        </div>
-        <div class="col-lg-4 col-12 price">
-            
-        </div>
-    </div>
-
-
-
-    <!-- <div class=""> -->
-        <!-- <div class="price"> -->
-            <!-- <tabel> -->
-            <!-- </tabel> -->
-        <!-- </div> -->
-    <!-- </div> -->
+    </section>
 
     <!-- footer -->
-
     <section class="footer py-5">
         <div class="row m-0">
             <div class="col-lg-2">
@@ -248,164 +230,40 @@ padding-left: 20%;
         </div>
     </section>
 
-    <!-- <div class="row  m-0" data-id="${id}">
-        <div class=" col-4 bg-success">
-            <img src="${Image1}" alt="" width="100px" width:"100px">
-        </div>
-        <div class=" col-6 bg-danger m-0">
-            <p class="">${title}</p>
-            <p class="">${discription}</p>
-            <p class="">$${price}</p>
-            <button class="deleteButton btn btn-dark" data-id="${id}">DELETE CART</button>
-        </div>
-        </div>   -->
-    
 
-    <script src="script.js"></script>
+
+
+    <script src="/login.js"></script>
+    <script src="/script.js"></script>
 
 </body>
-
-</html>
-
 <script>
-    // Cart
+    function fetchdata() {
+        fetch("http://localhost:3000/cartData")
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data.length)
+                document.querySelector(".totalCart").innerHTML = data.length
+            })
+            .catch((err) => console.log(err))
+    }
+    fetchdata()
+    //media icon 
     function Quantity_product() {
         fetch("http://localhost:3000/cartData")
             .then((res) => res.json())
             .then((data) => {
                 console.log(data.length)
+                // fetchdata()
                 document.querySelector(".totalCarts").innerHTML = data.length
-                if(data.length===0)
-            {
-                document.querySelector(".bag_info").innerHTML="your shoping bag is empty"
-                document.querySelector(".shoping_btn").innerHTML="your shoping bag is empty"
-            }
-            else
-            {
-                console.log(err)
-            }
             })
             .catch((err) => console.log(err))
     }
     Quantity_product()
 
-    // Fetch Data
-    function fetchdata() {
-        fetch("http://localhost:3000/cartData")
-            .then((res) => res.json())
-            .then((data) => {
-                datalist(data)
-                document.querySelector(".totalCart").innerHTML = data.length;
-                calculateTotalPrice(data)
-            })
-            .catch((err) => console.log(err))
-    }
-    fetchdata()
-
-    function datalist(data) {
-        let storedata = data.map((el) => singledata(el.Image1, el.id, el.title, el.discription, el.price))
-        document.querySelector(".CartSection").innerHTML = storedata.join("")
-    }
-
-    function singledata(Image1, id, title, discription, price) {
-        let data = `
-            <div class="row  addPro" data-id="${id}">
-                <div class=" col-4 text-center">
-                    <img src="${Image1}" alt="" height="150px" width:"150px" class="pt-3">
-                </div>
-                <div class=" col-8 m-0">
-                    <p class="">${title}</p>
-                    <p class="">${discription}</p>
-                    <p class="">$${price}</p>
-                    <i class="deleteButton bi bi-trash " data-id="${id}"></i>
-                </div>
-            </div>  
-    `
-        return data;
-    }
 
 
-
-    // Delete cart from cartpage
-    document.addEventListener("click", (el) => {
-        if (el.target.classList.contains("deleteButton")) {
-            Deleteproduct(el.target.dataset.id)
-        }
-    })
-
-    
-    function Deleteproduct(id) {
-        fetch(`http://localhost:3000/cartData/${id}`, {
-            "method": "DELETE"
-        })
-            .then((res) => res.json())
-            .then((data) => {
-                
-                alert("Remove Product?  Are you sure you want to remove this product from your shopping bag? ")
-                // fetchdata()
-                toasterFun() 
-            })
-            .catch((err) => console.log(err))
-    }
-
-
-    // calculate total price
-    function calculateTotalPrice(data) {
-        let totalprice = data.reduce((acc, item) => acc + parseFloat(item.price), 0)
-        let title = data.map((item) => item.discription + `<br />`).join("")
-        let price = data.map((item) => `$` + parseFloat(item.price) + `<br />`).join("")
-        console.log(title)
-        console.log(price)
-        document.querySelector(".price").innerHTML = `
-        <div class="price col-l2">  
-        <table style="margin:auto;" class="Estimated">
-               <tr style="">
-                <td class="p-2">
-                  <h6 class="m-0">Order Summary</h6>                  
-                </td>
-              </tr>
-              <tr style="">
-                <td class="p-2 pe-0">
-                    <hr  class="m-0 w-100" />      
-                    <p class="m-0">  Name  </p>  
-                    <hr  class="m-0 w-100" />   
-
-                 </td>
-                 <td class="p-2 ps-0">
-                    <hr  class="m-0 w-100" />   
-
-                    <p class="m-0">  Price   </p>
-                    <hr  class="m-0 w-100" />   
-
-                 </td>
-                 
-              </tr>
-              <tr style="">
-                <td class="p-2">
-                   ${title}
-                </td>
-                <td class="p-2">
-                   ${price}
-                </td>
-              </tr>
-              <tr style="color:red">
-                <td class="p-2">
-                    <hr  class="m-0 w-100 pe-0" />   
-                     Estimated Total
-                    <hr  class="m-0 w-100 pe-0" />   
-                </td>
-                <td style="color:red" class="p-2">
-                    <hr  class="m-0 w-100 ps-0" />   
-                $${totalprice.toFixed(2)}
-                    <hr  class="m-0 w-100 ps-0" />   
-                </td>
-              </tr>
-              <tr style="">
-                <td class="p-2">4 interest-free payments of $18.72 with Klarna. Learn More </td>    
-              </tr>
-    </table>
-        </div>
-    `
-    }
 
 </script>
+
+</html>

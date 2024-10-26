@@ -11,7 +11,6 @@ li {
     height: 25px;
     border-radius: 10px;
     margin-top: 5px;
-    /* margin-right: 15px; */
     padding-left: 10px;
 }
 #find_product
@@ -70,19 +69,12 @@ li {
 .collect_info
 {
     position: relative;
-    /* z-index: -1; */
-
 }
 .collect_info:hover  .info{
     display: block;
 }
 
-.footer .icons i
-{
-    /* padding-left: 10px; */
-}
 .icons {
-    /* font-size: 20px; */
     font-weight: bold;
 }
 
@@ -131,7 +123,7 @@ li {
 }
 
 .first_section .row {
-    background-image: url('assetsvideo/1bg-img.png');
+    background-image: url('../assetsvideo/1bg-img.png');
 }
 
 .btn_2 {
@@ -164,7 +156,7 @@ li {
 }
 
 .Shorts_jeans .first_div {
-    background-image: url('assetsvideo/shorty_story.webp');
+    background-image: url('../assetsvideo/shorty_story.webp');
 }
 
 .Shorts_jeans .first_para {
@@ -190,15 +182,15 @@ li {
 }
 
 .second_div {
-    background-image: url('assetsvideo/denim_daze.webp');
+    background-image: url('../assetsvideo/denim_daze.webp');
 }
 
 .beach_vibes .row {
-    background-image: url('assetsvideo/beach_vibes.png');
+    background-image: url('../assetsvideo/beach_vibes.png');
 }
 
 .category .skirts_dresses {
-    background-image: url('assetsvideo/skirts_dresses.webp');
+    background-image: url('../assetsvideo/skirts_dresses.webp');
 }
 
 .skirts_dresses_content,
@@ -224,7 +216,7 @@ li {
 }
 
 .category .cargos {
-    background-image: url('assetsvideo/cargos.webp');
+    background-image: url('../assetsvideo/cargos.webp');
 }
 
 .email {
@@ -245,10 +237,6 @@ li {
     background-color: rgb(54, 96, 213);
     color: #fff;
     font-size: 15px;
-}
-
-.icons i {
-    /* padding-right: 15px; */
 }
 
 .beach_vibes_content
@@ -312,19 +300,12 @@ li {
 
 
 /* Estimated Table */
-.Estimated
-{
-    /* background-color: aqua; */
-}
 table
 {
-    /* border: 1px solid black; */
     border-radius: 10px;
     margin-top: 5%;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
-    /* background-Color:#F5F5F7  */
-
 }
 table td
 {
@@ -344,13 +325,8 @@ table td
 
     margin: 0px 10px;
     padding: 10px 0px;
-    /* margin-top: 20px; */
     background-color: #fff;
-    /* border: 1px solid black; */
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 }
-/* .price
-{
-    background-color: #fff;
-} */
+

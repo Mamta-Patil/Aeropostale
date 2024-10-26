@@ -4,23 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Woman Product</title>
 
     <!-- jquery cdn -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
     <!-- css link -->
-    <link rel="stylesheet" href="signin.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="/STYLE/style.css">
+    <link rel="stylesheet" href="/STYLE/woman.css">
+    <link rel="stylesheet" href="/STYLE/media.css">
 
-    <!-- Botstrap link -->
+    <!-- Bootstrap link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 
     <!-- bootstrap icon link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -73,6 +73,7 @@
             </div>
         </div>
     </div>
+
     <!-- navbar for media query -->
     <section class="navigationbar d-lg-none d-block">
         <div class="row" style="width: 100%;">
@@ -86,13 +87,14 @@
                 <li class="pt-1">
                     <i class="bi bi-mask" style="font-size: 22px;font-weight: bold;" onclick="Darkmode()"></i>
                 </li>
-                <a href="cartpage.html"><span class="totalCarts">0</span><i class="bi bi-bag bagIcon   text-dark"
+                <a href="cartpage.html"><span class="totalCarts">0</span><i class="bagIcon bi bi-bag    text-dark"
                         style="font-size: 25px;font-weight: bold;"></i></a>
             </div>
         </div>
         <div class="col-12 text-center p-0">
             <input type="search" id="find_product" placeholder="Search">
         </div>
+
         <div class="slidebar">
             <ul class="ps-3">
                 <li><a href="woman.html" class="nav-link pt-1 ps-0 text-dark">Woman</a></li>
@@ -103,26 +105,32 @@
             </ul>
             <div class="user_info">
                 <a href="login.html" class="nav-link
-                     text-dark">Create Account</a>
+                 text-dark">Create Account</a>
                 <a href="signin.html" class="nav-link text-dark">Sign IN</a>
             </div>
         </div>
     </section>
 
-    <!-- signin form -->
-    <div class="signin" id="signup_form">
-        <form action="">
-            <h2>Sign in</h2>
-            <input type="email" placeholder="Email Address" class="input" id="email"> <br>
-            <input type="password" placeholder="Password" class="input" id="password"><br>
-            <div class="checkbox d-flex">
-                <input type="checkbox" class="remember_me">
-                <p class="pt-2 ps-2">Remember Me</p>
-            </div>
-            <button class="btn btn-info">Sign in</button>
-        </form>
-    </div>
 
+    <!-- Soarted By -->
+    <section class="soart-product d-flex justify-content-end">
+        <div class="soart-box">
+            <div class="soart-btn">
+                <a href="" class="text-dark">soarted by &nbsp;&nbsp;&nbsp;<i class="bi bi-arrow-down-up"></i> </a>
+            </div>
+            <div class="soart-by">
+                <button id="high-to-low">High to low</button> <br>
+                <button id="low-to-high">low to high</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- product section -->
+    <div class="women_pro">
+        <div class="container-fluid " id="mainSection">
+        </div>
+    </div>
 
     <!-- footer -->
     <section class="footer py-5">
@@ -210,41 +218,47 @@
     </section>
 
 
-    <script src="signin.js"></script>
-<script src="script.js"></script>
+
+    <script src="../script.js"></script>
+
 </body>
+
 <script>
-        function fetchdata() {
+    function fetchdata() {
         fetch("http://localhost:3000/cartData")
             .then((res) => res.json())
             .then((data) => {
-                console.log(data.length)
+                // console.log(data)
                 document.querySelector(".totalCart").innerHTML = data.length
             })
             .catch((err) => console.log(err))
     }
     fetchdata()
-    
+
+
     //media icon 
     function Quantity_product() {
         fetch("http://localhost:3000/cartData")
             .then((res) => res.json())
             .then((data) => {
-                console.log(data.length)
+                // console.log(data.length)
                 document.querySelector(".totalCarts").innerHTML = data.length
+                fetchdata()
             })
             .catch((err) => console.log(err))
     }
     Quantity_product()
-    
-    // // navbar toggle using jquery
-    // $(document).ready(function () {
-    //     $(".slidebar").hide();
-    //     $(".menu").click(function () {
-    //         $(".slidebar").slideToggle("show")
-    //         // $(".slidebar").fadeOut(2000)
-    //     })
-    // })
+
+
+    // soarted by
+    $(document).ready(function () {
+        $(".soart-by").hide();
+        $(".soart-btn").click(function (e) {
+            e.preventDefault()
+            $(".soart-by").slideToggle()
+        })
+    })
+
 
 
 </script>
