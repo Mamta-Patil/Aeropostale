@@ -265,7 +265,7 @@ li {
 }
 
 /* dark mode css */
-.footer a,
+.footer a, form h2, .soart-btn .text-center i
 .footer h5,.navbar .nav-link {
     color: black;
 }
@@ -283,14 +283,14 @@ li {
     background-color: #222;
 }
 
-.dark .offer,.dark .offer p 
+.dark .offer,.dark .offer p ,.soart-btn a i,#login-form button,.signin button
 {
     background-color: #fff;
     color: #222;
 }
 
-.dark .nav-link,
-.dark h5,.dark h3,
+.dark .nav-link, .dark form h2,
+.dark h5,.dark h3, 
 .dark p,.dark i,.dark span{
     color: #fff;
 }

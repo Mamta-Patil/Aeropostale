@@ -38,7 +38,7 @@
                         <li class="nav-item " style="list-style: none;"><a href="woman.html"
                                 class="nav-link ps-2 pt-0 ">Woman</a>
                         </li>
-                        <li class="nav-item" style="list-style: none;"><a href="" class="nav-link ps-2 pt-0 ">Man</a>
+                        <li class="nav-item" style="list-style: none;"><a href="man.html" class="nav-link ps-2 pt-0 ">Man</a>
                         </li>
                         <li class="nav-item" style="list-style: none;"><a href="" class="nav-link ps-2 pt-0">Jeans</a>
                         </li>
@@ -57,7 +57,7 @@
                     <input type="text" name="" id="serchbar">
                     <ul class="d-flex nav_icons">
                         <li><i class="bi bi-search "></i></li>
-                        <li class="collect_info ps-2"><i class="bi bi-person pe-2"></i>  
+                        <li class="collect_info ps-2"><i class="bi bi-person pe-2"></i>
                             <ul class="info">
                                 <a href="login.html">Create Account</a>
                                 <a href="signin.html" class="mt-2">Sign In</a>
@@ -87,7 +87,7 @@
                 <li class="pt-1">
                     <i class="bi bi-mask" style="font-size: 22px;font-weight: bold;" onclick="Darkmode()"></i>
                 </li>
-                <a href="cartpage.html"><span class="totalCarts">0</span><i class="bagIcon bi bi-bag    text-dark"
+                <a href="cartpage.html"><span class="totalCarts">0</span><i class="bagIcon bi bi-bag"
                         style="font-size: 25px;font-weight: bold;"></i></a>
             </div>
         </div>
@@ -98,7 +98,7 @@
         <div class="slidebar">
             <ul class="ps-3">
                 <li><a href="woman.html" class="nav-link pt-1 ps-0 text-dark">Woman</a></li>
-                <li><a href="" class="nav-link pt-1 ps-0 text-dark">Man</a></li>
+                <li><a href="man.html" class="nav-link pt-1 ps-0 text-dark">Man</a></li>
                 <li><a href="" class="nav-link pt-1 ps-0 text-dark">Jeans</a></li>
                 <li><a href="" class="nav-link pt-1 ps-0 text-dark">Aero for All </a></li>
                 <li><a href="" class="nav-link pt-1 ps-0 text-dark">Clearance</a></li>
@@ -119,8 +119,8 @@
                 <a href="" class="text-dark">soarted by &nbsp;&nbsp;&nbsp;<i class="bi bi-arrow-down-up"></i> </a>
             </div>
             <div class="soart-by">
-                <button id="high-to-low">High to low</button> <br>
-                <button id="low-to-high">low to high</button>
+                <button id="high-to-low-men-data">High to low</button> <br>
+                <button id="low-to-high-men-data">low to high</button>
             </div>
         </div>
     </section>
@@ -258,6 +258,22 @@
             $(".soart-by").slideToggle()
         })
     })
+
+
+    // filter price
+    let high_to_low_men = document.getElementById("high-to-low-men-data")
+    let low_to_high_men = document.getElementById("low-to-high-men-data")
+    high_to_low_men.addEventListener("click", () => {
+        const high_to_low_data_men = productdatamen.sort((a, b) => b.price - a.price)
+        console.log(high_to_low_data_men);
+        datalistmen(high_to_low_data_men)
+    })
+    low_to_high_men.addEventListener("click", () => {
+        const low_to_high_data_men = productdatamen.sort((a, b) => a.price - b.price)
+        console.log(low_to_high_data_men);
+        datalistmen(low_to_high_data_men)
+    })
+
 
 
 

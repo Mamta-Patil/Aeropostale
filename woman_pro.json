@@ -121,28 +121,7 @@
       "id": "7bf4"
     }
   ],
-  "cartData": [
-    {
-      "id": "abf6",
-      "Image1": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw37e2f360/62345312_406_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
-      "Image2": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dwb0a374d9/62345312_406_alt2.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
-      "Image3": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dwc7369a82/62345312_406_alt1.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
-      "Image4": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw028ac44b/62345312_406_alt3.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
-      "title": "Super Big Deals",
-      "discription": "Long Sleeve Fleece Overshirt",
-      "price": "23.98 "
-    },
-    {
-      "id": "69ed",
-      "Image1": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dwe7510c69/83020101_692_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
-      "Image2": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw81f6c51c/83020101_692_alt1.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
-      "Image3": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw3fc7d6e7/83020101_692_alt2.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
-      "Image4": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw0d2c3ab1/83020101_692_alt3.jpg?sw=478&sh=557&sm=fit&sfrm=jpg",
-      "title": "New!",
-      "discription": "Vintage Fit Crew Tee",
-      "price": "9.98"
-    }
-  ],
+  "cartData": [],
   "menData": [
     {
       "image1": [

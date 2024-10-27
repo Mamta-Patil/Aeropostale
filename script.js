@@ -93,6 +93,7 @@ $(document).ready(function()
     $(".slidebar").hide();
     $(".menu").click(function()
 {
+    $(this).toggleClass("bi-list  bi-x");
     $(".slidebar").slideToggle("show")
 })
 })
@@ -111,7 +112,6 @@ low_to_high.addEventListener("click",()=>{
     console.log( low_to_high_data);
     datalist(low_to_high_data)
 })
-
 
 
     // For Dark Mode

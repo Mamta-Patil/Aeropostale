@@ -38,7 +38,7 @@
 
 }
 
-@media(min-width:576px) and (max-width:777px) {
+@media(min-width:576px) and (max-width:767px) {
     #mainSection {
         margin-top: 5%;
         display: grid;
@@ -68,7 +68,7 @@
     
 }
 
-@media(min-width:778px) and (max-width:991px) {
+@media(min-width:768px) and (max-width:991px) {
     #mainSection {
         margin-top: 5%;
         display: grid;
