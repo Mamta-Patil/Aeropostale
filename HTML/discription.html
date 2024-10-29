@@ -38,7 +38,8 @@
                         <li class="nav-item " style="list-style: none;"><a href="woman.html"
                                 class="nav-link ps-2 pt-0 ">Woman</a>
                         </li>
-                        <li class="nav-item" style="list-style: none;"><a href="man.html" class="nav-link ps-2 pt-0 ">Man</a>
+                        <li class="nav-item" style="list-style: none;"><a href="man.html"
+                                class="nav-link ps-2 pt-0 ">Man</a>
                         </li>
                         <li class="nav-item" style="list-style: none;"><a href="" class="nav-link ps-2 pt-0">Jeans</a>
                         </li>
@@ -57,7 +58,7 @@
                     <input type="text" name="" id="serchbar">
                     <ul class="d-flex nav_icons">
                         <li><i class="bi bi-search "></i></li>
-                        <li class="collect_info ps-2"><i class="bi bi-person pe-2"></i>  
+                        <li class="collect_info ps-2"><i class="bi bi-person pe-2"></i>
                             <ul class="info">
                                 <a href="login.html">Create Account</a>
                                 <a href="signin.html" class="mt-2">Sign In</a>
@@ -114,7 +115,7 @@
 
 
     <!-- Discription of Data -->
-    <div class="container-fluid product_data">
+    <div class="container-fluid product_data mt-5">
         <div class="row">
             <div class="col-lg-4">
                 <div class="row">
@@ -126,7 +127,7 @@
                         <img src="https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dwb57b5f6d/80111101_047_alt2.jpg?sw=478&sh=557&sm=fit&sfrm=jpg"
                             alt="" class="img-fluid w-100 " id="image2">
                     </div>
-                </div>
+                </div>  
             </div>
             <div class="col-lg-4">
                 <div class="row">
@@ -147,7 +148,7 @@
                 </a>
                 <h5 id="title" style="color: red;" class="py-1"></h5>
                 <h5 id="discription" class="py-1"></h5>
-                <h5 id="price" class="py-1"></h5>
+                <h5 id="price" class="py-1">$</h5>
                 <h6 class="pt-3">Size: Select Size </h6>
                 <div class="sizeInfo">
                     <span><a href="">XS</a></span>
@@ -163,8 +164,8 @@
         </div>
     </div>
 
-     <!-- footer -->
-     <section class="footer py-5">
+    <!-- footer -->
+    <section class="footer py-5">
         <div class="row m-0">
             <div class="col-lg-2">
                 <br>
@@ -250,7 +251,7 @@
 
 
 
-<script src="../script.js"></script>
+    <script src="../script.js"></script>
 
 </body>
 
@@ -314,12 +315,12 @@
                 .then((res) => res.json())
                 .then((data) => {
                     document.querySelector(".totalCart").innerHTML = data.length;
-                    alert("data added suceessfully")
                     fetchdata()
                 })
                 .catch((err) => console.log(err))
         })
     })
-    
+
 </script>
+
 </html>

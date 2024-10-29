@@ -6,23 +6,35 @@
 li {
     list-style: none;
 }
-
+.head-slider
+{
+    height: 50px;
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    background-color: #17274A;
+    display: block;
+    z-index: 1000;
+    color: #fff;
+    /* padding: 5px 0px; */
+}
 #serchbar {
     height: 25px;
     border-radius: 10px;
     margin-top: 5px;
     padding-left: 10px;
 }
-#find_product
-{
-    width:90%;
+
+#find_product {
+    width: 90%;
     height: 40px;
     border: 1px solid black;
     border-radius: 25px;
     padding-left: 20px;
     outline: none;
 }
-.navbar {
+
+.navbar,.navigationbar {
     width: 100%;
     position: fixed;
     top: 0%;
@@ -30,27 +42,28 @@ li {
     z-index: 9999;
 }
 
-.navbar i{
+.navbar i {
     font-size: 20px;
 }
-.nav_icons
-{
+
+.nav_icons {
     padding-left: 15px;
 }
-.nav_icons i
-{   
+
+.nav_icons i {
     font-size: 22px;
 }
-.bi-mask
-{
-  padding-right: 15px;
+
+.bi-mask {
+    padding-right: 15px;
 }
+
 .info {
     display: none;
     position: absolute;
     z-index: 999;
     top: 98%;
-    right:-200%;
+    right: -200%;
     background-color: #fff;
     padding: 20px 20px;
 }
@@ -66,11 +79,12 @@ li {
     text-decoration: none;
     color: black;
 }
-.collect_info
-{
+
+.collect_info {
     position: relative;
 }
-.collect_info:hover  .info{
+
+.collect_info:hover .info {
     display: block;
 }
 
@@ -107,11 +121,12 @@ li {
     margin-top: 16px;
     margin-left: -1px;
 }
-.video_conetent
-{
+
+.video_conetent {
     position: relative;
 }
-.video_para  {
+
+.video_para {
     position: absolute;
     top: 25%;
     left: 0%;
@@ -134,16 +149,23 @@ li {
 
 .nba_content {
     text-align: center;
-    padding-top: 15%;
+    padding-top: 8%;
 }
 
 .nba_video {
     padding: 5%;
+    position: relative;
 }
-
+.nba_video .content
+{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 20%;
+    color: #fff;
+}
 .Shorts_jeans .first_div,
 .second_div,
-.beach_vibes .row,
 .skirts_dresses,
 .graphi,
 .cargos,
@@ -187,8 +209,12 @@ li {
 
 .beach_vibes .row {
     background-image: url('../assetsvideo/beach_vibes.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
 }
-
+    
 .category .skirts_dresses {
     background-image: url('../assetsvideo/skirts_dresses.webp');
 }
@@ -205,11 +231,11 @@ li {
     right: 10%;
 }
 
-.category .graphics_video
-{
+.category .graphics_video {
     position: relative;
-    
+
 }
+
 .category .graphics_content {
     position: absolute;
     top: 10%;
@@ -239,59 +265,67 @@ li {
     font-size: 15px;
 }
 
-.beach_vibes_content
-{
+.beach_vibes_content {
     top: 30%;
 }
-.slidebar
-{
+
+.slidebar {
     height: 100vh;
-    width:50%;
+    width: 50%;
     background-color: rgb(249, 245, 245);
     color: #fff;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     padding-top: 10%;
 }
-.user_info a
-{
+
+.user_info a {
     padding: 10px 20px;
     border: 1px solid black;
     border-radius: 25px;
     display: block;
-    width: 100%;    
+    width: 100%;
     margin: 5% 0%;
     text-align: center;
 }
 
 /* dark mode css */
-.footer a, form h2, .soart-btn .text-center i
-.footer h5,.navbar .nav-link {
+.footer a,
+form h2,
+.soart-btn .text-center i .footer h5,
+.navbar .nav-link {
     color: black;
 }
-.offer
-{
+
+.offer {
     background-color: black;
 }
 
 .dark {
     background-color: #222;
-    
+
 }
-.dark .navbar
-{
+
+.dark .navbar {
     background-color: #222;
 }
 
-.dark .offer,.dark .offer p ,.soart-btn a i,#login-form button,.signin button
-{
+.dark .offer,
+.dark .offer p,
+.soart-btn a i,
+#login-form button,
+.signin button {
     background-color: #fff;
     color: #222;
 }
 
-.dark .nav-link, .dark form h2,
-.dark h5,.dark h3, 
-.dark p,.dark i,.dark span{
+.dark .nav-link,
+.dark form h2,
+.dark h5,.dark .bag_info,
+.dark h3,
+.dark p,
+.dark i,
+.dark span {
     color: #fff;
 }
 
@@ -300,28 +334,26 @@ li {
 
 
 /* Estimated Table */
-table
-{
+table {
     border-radius: 10px;
     margin-top: 5%;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 }
-table td
-{
+
+table td {
     padding: 10px 0px;
     height: 20px;
 }
 
 
 /* cart page css */
-.CartSection
-{
+.CartSection {
     height: 80vh;
     overflow-y: scroll;
 }
-.addPro
-{
+
+.addPro {
 
     margin: 0px 10px;
     padding: 10px 0px;
@@ -329,4 +361,3 @@ table td
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 }
-

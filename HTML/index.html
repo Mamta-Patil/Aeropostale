@@ -23,15 +23,17 @@
     <!-- bootstrap icon link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- swiper slider  -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-
 </head>
 
 <body>
+
+    <div class="head-slider text-center w-100">
+        <div id="sliding-text">Want it ASAP? Buy Online, Pick Up In-Store FREE  : <a href="" class="" style="color: #fff;">woman</a> <a href="" style="color: #fff;">man</a> |   $6.99 & Up Fall Sale. In Stores & Online : <a href="" style="color: #fff;"> woman</a> <a href="" style="color: #fff;">man</a> | 
+            Score Your NFL Gear Here: <a href="" style="color: #fff;">Shop Now</a> | FREE JEANS When You Buy One + Free Shipping <a href="" style="color: #fff;">Shop Now</a> | Free Shipping on Orders $75+  <a href="" style="color: #fff;">Shop Now</a> | FREE JEANS When You Buy One + Free Shipping <a href="" style="color: #fff;">Shop Now</a> </div>
+    </div>
+
     <!-- navbar -->
-    <div class="navbar position-fixed d-lg-block d-none">
+    <div class="navbar position-fixed d-lg-block d-none mt-4">
         <div class="container-fluid">
             <div class="row w-100 py-3" style="align-items:center;">
                 <div class="col-4 p-0  d-none d-sm-block">
@@ -144,13 +146,13 @@
     <!-- video & content -->
     <section class="video_conetent py-3">
         <video class="w-100" autoplay controls loop muted>
-            <source src="../assetsvideo/price.mp4" type="">
+            <source src="../assetsvideo/fall_sale.mp4" type="">
         </video>
-        <div class="video_para text-center">
+        <!-- <div class="video_para text-center">
             <img src="../assetsvideo/video_content.webp" alt="" class="img-fluid w-50">
             <P class="d-flex"><a href="" class="text-dark">Women</a><a href="" class="ps-lg-4 ps-2 text-dark">Men</a>
             </P>
-        </div>
+        </div> -->
     </section>
 
     <!-- nba section -->
@@ -169,6 +171,9 @@
                     <video autoplay controls loop muted width="100%">
                         <source src="../assetsvideo/nba_video.mp4" type="">
                     </video>
+                    <div class="content ">
+                        <a href="" class="text-light nav-link">IT'S GIVING... <br> BIG ENERGY GOALS <br> CNVA SULIVAN <br>IN OUR VIRAL <br> BAGGY JEANS</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -205,7 +210,7 @@
     <!-- beach section -->
     <section class="beach_vibes">
         <div class="row m-0">
-            <img src="../assetsvideo/new_now_dis.webp" alt="" class="beachvibes_discount img-fluid "
+            <img src="../assetsvideo/new_now_dis.webp" alt="" class="beachvibes_discount img-fluid"
                 style="height: 150px; width:160px; ">
             <div class="beach_vibes_content text-center">
                 <img src="../assetsvideo/beach_vibes_text.webp" alt="" class="img-fluid w-50 ">
@@ -218,26 +223,29 @@
     </section>
 
     <!-- Slider -->
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 4</div>
-            <div class="swiper-slide">Slide 5</div>
-            <div class="swiper-slide">Slide 6</div>
-            <div class="swiper-slide">Slide 7</div>
-            <div class="swiper-slide">Slide 8</div>
-            <div class="swiper-slide">Slide 9</div>
+    <div class="mainSection mt-5 container">
+        <h5 class="text-center">Picked just for your</h5>
+        <div class="slider">
+            <p>Picked just for You</p>
+            <!-- <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div>
+            </div>
+            <div class="swiper-pagination"></div> -->
+
+            <!-- If we need navigation buttons -->
+            <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> -->
+
         </div>
-        <!-- <div class="swiper-pagination"></div> -->
-
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
     </div>
-
 
     <!-- footer -->
     <section class="footer py-5">
@@ -326,27 +334,9 @@
 
     <script src="/script.js"></script>
 
-    <!-- swiper slider -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-
 </body>
 <script>
 
-    // FOr slider
-    var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 4,
-        spaceBetween: 30,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
-    });
 
     // For Cart value
     function fetchdata() {
@@ -370,6 +360,76 @@
             .catch((err) => console.log(err))
     }
     Quantity_product()
+    
+   
+ // picked for you
+ let mainSectionpicked = document.querySelector(".slider");
+ let productdatapicked = []
+ function fetchdatapicked() {
+     fetch("http://localhost:3000/picked")
+         .then((res) => res.json())
+         .then((data) => {
+             datalistpicked(data)
+             productdatapicked = data
+             console.log(productdatapicked)
+         })
+         .catch((err) => console.log(err))
+ }
+ fetchdatapicked()
+ 
+ 
+ function datalistpicked(data) {
+     console.log("hello");
+     let store = data.map((el) =>
+         singledatapicked(el.id, el.image1, el.title, el.discription, el.price))
+     mainSectionpicked.innerHTML = store.join("")
+ }
+ 
+ 
+ function singledatapicked(id, image1, title, discription, price) {
+     let data = `   
+     <a href="discription.html?title=${encodeURIComponent(title)}&image1=${encodeURIComponent(image1[0])}&image2=${encodeURIComponent(image1[1])}&image3=${encodeURIComponent(image1[2])}&image4=${encodeURIComponent(image1[3])}&price=${encodeURIComponent(price)}&discription=${encodeURIComponent(discription)}" class="nav-link p-0 m-1"> 
+     <div class="card swiper-slide" data-id="${id}">
+     <div class="card-image">
+         <img src="${image1}" alt="" width="100%" class="img1">
+     </div>
+     <div class="card-body text-dark">
+         <p class="card-title">${title}</p>
+         <p class="card-discription">${discription}</p>
+         <p class="card-price">$${price}</p>
+     </div>
+     </div>  
+ </a>
+     `
+     return data;
+ }
+ 
+// head-slider
+const slidingText = document.getElementById("sliding-text");
+    const sentences = slidingText.innerHTML.split(" | ");
+    let sentenceIndex = 0;
+
+    function slideText() {
+        const maxWidth = window.innerWidth - slidingText.clientWidth;
+        let currentPosition = 0;
+
+        const slideInterval = setInterval(() => {
+            if (currentPosition <= maxWidth) {
+                slidingText.style.left = currentPosition + "px";
+                currentPosition += 10;
+            } else {
+                clearInterval(slideInterval);
+                setTimeout(() => {
+                    slidingText.style.left = "0px";
+                    sentenceIndex = (sentenceIndex + 1) % sentences.length;
+                    slidingText.innerHTML = sentences[sentenceIndex];
+                    setTimeout(slideText, 2000);
+                }, 1000);
+            }
+        }, 10);
+    }
+    slideText();
+
 
 </script>
 

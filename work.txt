@@ -1,4 +1,0 @@
-1. Delete Icon
-2. Add Some Data in json
-3. Add Hover Image on Images
-4. Total Price CSS

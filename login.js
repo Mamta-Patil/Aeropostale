@@ -5,7 +5,6 @@ login_form.addEventListener("submit", (el) => {
     el.preventDefault();
     let first_name = document.getElementById("firstName").value;
     let last_name = document.getElementById("lastName").value;
-    let phoneNo = document.getElementById("phoneNo").value;
     let email = document.getElementById("email").value;
     let conf_Email = document.getElementById("confEmail").value;
     let password = document.getElementById("password").value;
@@ -31,17 +30,10 @@ login_form.addEventListener("submit", (el) => {
     }
     if (last_name == "") {
         document.querySelector("#lastNameError").innerText = "Last name is compulasory"
-        isvalid =false
+        isvalid = false
     }
     else {
         document.querySelector("#lastNameError").innerText = ""
-    }
-    if (phoneNo == "") {
-        document.querySelector("#phoneNoError").innerText = "Phone Number is compulasory"
-        isvalid= false
-    }
-    else {
-        document.querySelector("#phoneNoError").innerText = ""
     }
     if (email == "") {
         document.querySelector("#emailError").innerText = "Email is compulasory"
@@ -66,7 +58,7 @@ login_form.addEventListener("submit", (el) => {
     }
     if (con_Password == "") {
         document.querySelector("#conPasswordError").innerText = "conPasswordError is compulasory"
-        isvalid=false
+        isvalid = false
     }
     else {
         document.querySelector("#conPasswordError").innerText = ""
@@ -84,8 +76,7 @@ login_form.addEventListener("submit", (el) => {
         document.getElementById("password").value = ""
         document.getElementById("conPassword").value = ""
     }
-    else
-    {
+    else {
         alert("First, Fill All Information")
     }
 

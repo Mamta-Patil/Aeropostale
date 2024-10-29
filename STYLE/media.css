@@ -2,21 +2,26 @@
     #serchbar {
         width: 55%;
     }
-    #mainSection {
-        margin-top: 5%;
+
+    #mainSection,.slider{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         width: 100%;
     }
-    .product_data
+    #mainSection
     {
+        margin-top: 20%;
+    }
+
+    .product_data {
         margin-top: 5%;
-        /* z-index: -1; */
+
     }
-    .women_pro
-    {
-       margin-top: 20%;
+
+    .women_pro,.man_pro {
+        margin-top: 38%;
     }
+
     .bagIcon {
         position: relative;
         top: -1%;
@@ -24,31 +29,36 @@
         color: black;
     }
 
-    .totalCart,.totalCarts{
+    .totalCart,
+    .totalCarts {
         position: absolute;
-        right:8%;
+        right: 8%;
         padding-top: 9px;
         color: black;
     }
 
     .discount {
-        margin-top: 5%;
+        margin-top: 24%;
     }
-    
+
 
 }
 
 @media(min-width:576px) and (max-width:767px) {
-    #mainSection {
-        margin-top: 5%;
+    #mainSection,.slider {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         width: 100%;
     }
-    .product_data
+    #mainSection
     {
+        margin-top: 32%;
+    }
+
+    .product_data {
         margin-top: 5%;
     }
+
     .bagIcon {
         position: relative;
         top: -1%;
@@ -56,29 +66,36 @@
         color: black;
     }
 
-    .totalCart,.totalCarts{
+    .totalCart,
+    .totalCarts {
         position: absolute;
-        right:6%;
+        right: 6%;
         padding-top: 9px;
         color: black;
     }
+
     .discount {
-        margin-top: 5%;
+        margin-top: 20%;
     }
-    
+
 }
 
 @media(min-width:768px) and (max-width:991px) {
-    #mainSection {
-        margin-top: 5%;
+    #mainSection,.slider {
+      
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         width: 100%;
     }
-    .product_data
-{
-    margin-top: 5%;
-}
+    #mainSection
+    {
+        margin-top: 24%;
+    }
+
+    .product_data {
+        margin-top: 5%;
+    }
+
     .bagIcon {
         position: relative;
         top: -1%;
@@ -86,60 +103,74 @@
         color: black;
     }
 
-    .totalCart,.totalCarts{
+    .totalCart,
+    .totalCarts {
         position: absolute;
-        right:4.5%;
+        right: 4.5%;
         padding-top: 9px;
         color: black;
     }
+
     .discount {
-        margin-top: 5%;
+        margin-top: 15%;
     }
-    
+
 
 }
 
 @media(min-width:992px) and (max-width:1200px) {
     #mainSection {
-        margin-top: 15%;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         width: 100%;
     }
-    .product_data
-    {
+#mainSection
+{
+    margin-top: 25%;
+}
+    .product_data {
         margin-top: 15%;
     }
+
     .bagIcon {
         position: relative;
         top: -1%;
         left: 15%;
         color: black;
-    }   
+    }
 
-    .totalCart,.totalCarts{
+    .totalCart,
+    .totalCarts {
         position: absolute;
-        right:4%;
+        right: 4%;
         padding-top: 4px;
         color: black;
     }
+
     .discount {
-        margin-top: 12%;
+        margin-top: 15%;
     }
-    
+
 }
 
 @media(min-width:1201px) and (max-width:1400px) {
-    #mainSection,#mainSectionmen {
+
+    #mainSection,
+    #mainSectionmen{
         margin-top: 17%;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         width: 100%;
     }
-    .product_data
+    .slider
     {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+    .product_data {
         margin-top: 10%;
     }
+
     .bagIcon {
         position: relative;
         top: -1%;
@@ -147,13 +178,15 @@
         color: black;
     }
 
-    .totalCart,.totalCarts{
+    .totalCart,
+    .totalCarts {
         position: absolute;
-        right:3.5%;
+        right: 3.5%;
         padding-top: 4px;
         color: black;
     }
+
     .discount {
-        margin-top: 9%;
+        margin-top: 12%;
     }
 }

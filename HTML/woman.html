@@ -38,7 +38,8 @@
                         <li class="nav-item " style="list-style: none;"><a href="woman.html"
                                 class="nav-link ps-2 pt-0 ">Woman</a>
                         </li>
-                        <li class="nav-item" style="list-style: none;"><a href="man.html" class="nav-link ps-2 pt-0 ">Man</a>
+                        <li class="nav-item" style="list-style: none;"><a href="man.html"
+                                class="nav-link ps-2 pt-0 ">Man</a>
                         </li>
                         <li class="nav-item" style="list-style: none;"><a href="" class="nav-link ps-2 pt-0">Jeans</a>
                         </li>
@@ -57,7 +58,7 @@
                     <input type="text" name="" id="serchbar">
                     <ul class="d-flex nav_icons">
                         <li><i class="bi bi-search "></i></li>
-                        <li class="collect_info ps-2"><i class="bi bi-person pe-2"></i>  
+                        <li class="collect_info ps-2"><i class="bi bi-person pe-2"></i>
                             <ul class="info">
                                 <a href="login.html">Create Account</a>
                                 <a href="signin.html" class="mt-2">Sign In</a>
@@ -110,8 +111,7 @@
             </div>
         </div>
     </section>
-
-
+    
     <!-- Soarted By -->
     <section class="soart-product d-flex justify-content-end">
         <div class="soart-box">
@@ -124,7 +124,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- product section -->
     <div class="women_pro">
@@ -228,7 +227,6 @@
         fetch("http://localhost:3000/cartData")
             .then((res) => res.json())
             .then((data) => {
-                // console.log(data)
                 document.querySelector(".totalCart").innerHTML = data.length
             })
             .catch((err) => console.log(err))
@@ -241,7 +239,6 @@
         fetch("http://localhost:3000/cartData")
             .then((res) => res.json())
             .then((data) => {
-                // console.log(data.length)
                 document.querySelector(".totalCarts").innerHTML = data.length
                 fetchdata()
             })
