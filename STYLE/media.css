@@ -8,6 +8,7 @@
         grid-template-columns: repeat(1, 1fr);
         width: 100%;
     }
+    
     #mainSection
     {
         margin-top: 20%;
@@ -18,7 +19,7 @@
 
     }
 
-    .women_pro,.man_pro {
+    .women_pro,.men_pro {
         margin-top: 38%;
     }
 

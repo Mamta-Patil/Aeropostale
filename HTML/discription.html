@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Description Page</title>
+    
     <!-- discription css -->
     <link rel="stylesheet" href="/STYLE/style.css">
     <link rel="stylesheet" href="/STYLE//discription.css">
@@ -32,7 +33,7 @@
     <!-- navbar -->
     <div class="navbar position-fixed d-lg-block d-none">
         <div class="container-fluid">
-            <div class="row w-100 py-3" style="align-items:center;">
+            <div class="row w-100" style="align-items:center;">
                 <div class="col-4 p-0  d-none d-sm-block">
                     <ul class="d-flex p-0  m-0">
                         <li class="nav-item " style="list-style: none;"><a href="woman.html"
@@ -52,7 +53,7 @@
                     </ul>
                 </div>
                 <div class="col-4 text-center pe-2">
-                    <h3 class="pe-5">Aeropostal</h3>
+                    <img src="../assetsvideo/Aeropostale-logo.png" alt="" height="100px" width="200px">
                 </div>
                 <div class="col-4 d-flex justify-content-end icons pt-2">
                     <input type="text" name="" id="serchbar">
@@ -82,8 +83,8 @@
             <div class="col-2 text-center">
                 <i class="bi bi-list menu" style="font-size: 35px; font-weight: bold;"></i>
             </div>
-            <div class="col-8 text-center pt-2">
-                <h3>Aeropostal</h3>
+            <div class="col-8 text-center">
+                <img src="../assetsvideo/Aeropostale-logo.png" alt="" height="60px" width="200px">
             </div>
             <div class="col-2 text-center pt-1 d-flex justify-content-end">
                 <li class="pt-1">
@@ -268,6 +269,7 @@
             .catch((err) => console.log(err))
     }
     fetchdata()
+
     //media icon 
     function Quantity_product() {
         fetch("http://localhost:3000/cartData")
@@ -280,7 +282,7 @@
     }
     Quantity_product()
 
-
+   // Description Page
     const param = new URLSearchParams(window.location.search)
     window.addEventListener("load", () => {
         document.querySelector("#image1").src = param.get("image1")
@@ -290,7 +292,7 @@
 
         document.querySelector("#title").innerText = param.get("title")
         document.querySelector("#discription").innerText = param.get("discription")
-        document.querySelector("#price").innerText = param.get("price")
+        document.querySelector("#price").innerText = '$'+ param.get("price")
 
         document.querySelector("#addtocart").addEventListener("click", () => {
             let cartdata = {

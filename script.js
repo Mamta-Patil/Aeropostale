@@ -81,8 +81,6 @@ function singledatamen(id, image1, title, discription, price) {
 }
 
 
-
-
 // navbar toggle using jquery$
 $(document).ready(function () {
     $(".slidebar").hide();
