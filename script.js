@@ -2,7 +2,7 @@
 let mainSection = document.querySelector("#mainSection");
 let productdata = []
 function fetchdata() {
-    fetch("http://localhost:3000/womanData")
+    fetch("https://aeropostale-backend-1.onrender.com/womanData")
         .then((res) => res.json())
         .then((data) => {
             datalist(data)
@@ -37,12 +37,11 @@ function singledata(id, image1, title, discription, price) {
     return data;
 }
 
-
 // men's products data
 let mainSectionmen = document.querySelector("#mainSectionmen");
 let productdatamen = []
 function fetchdatamen() {
-    fetch("http://localhost:3000/menData")
+    fetch("https://aeropostale-backend-1.onrender.com/menData")
         .then((res) => res.json())
         .then((data) => {
             datalistmen(data)
@@ -53,14 +52,12 @@ function fetchdatamen() {
 }
 fetchdatamen()
 
-
 function datalistmen(data) {
     console.log("hello");
     let store = data.map((el) =>
         singledatamen(el.id, el.image1, el.title, el.discription, el.price))
     mainSectionmen.innerHTML = store.join("")
 }
-
 
 function singledatamen(id, image1, title, discription, price) {
     let data = `   
@@ -80,7 +77,6 @@ function singledatamen(id, image1, title, discription, price) {
     return data;
 }
 
-
 // navbar toggle using jquery$
 $(document).ready(function () {
     $(".slidebar").hide();
@@ -89,7 +85,6 @@ $(document).ready(function () {
         $(".slidebar").slideToggle("show")
     })
 })
-
 
 // soart product by price woman data
 let high_to_low = document.getElementById("high-to-low")
@@ -105,12 +100,9 @@ low_to_high.addEventListener("click", () => {
     datalist(low_to_high_data)
 })
 
-
-// For Dark Mode
+//For THEME 
 function Darkmode() {
     let element = document.body;
     element.classList.toggle("dark")
     console.log(element);
 }
-
-

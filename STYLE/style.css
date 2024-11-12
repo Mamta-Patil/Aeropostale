@@ -287,12 +287,17 @@ li {
     margin: 5% 0%;
     text-align: center;
 }
+.card-body
+{
+    height: 140px;
+}
 
-/* dark mode css */
+
+/* THEME CSS */
 .footer a,
 form h2,
 .soart-btn .text-center i .footer h5,
-.navbar .nav-link {
+.navbar .nav-link,.navigationbar,.slidebar a {
     color: black;
 }
 
@@ -302,20 +307,25 @@ form h2,
 
 .dark {
     background-color: #222;
-
+    color: #fff;
 }
 
-.dark .navbar {
+.dark .navbar,.dark .navigationbar,.dark .addPro,.dark .offer,.dark .slidebar,.dark .card-body {
     background-color: #222;
+    color: white;
+}
+.dark .navigationbar img
+{
+    background-color: #fff;
 }
 
 .dark .offer,
 .dark .offer p,
 .soart-btn a i,
 #login-form button,
-.signin button {
+.signin button,.navigationbar {
     background-color: #fff;
-    color: #222;
+    color: #222; 
 }
 
 .dark .nav-link,
@@ -324,10 +334,15 @@ form h2,
 .dark h3,
 .dark p,
 .dark i,
-.dark span {
+.dark span, 
+.dark .addPro,.dark .slidebar {
     color: #fff;
 }
 
+.dark .user_info a
+{
+    border-color: #fff;
+}
 
 
 
@@ -336,7 +351,7 @@ form h2,
 table {
     border-radius: 10px;
     margin-top: 5%;
-    background-color: #fff;
+    /* background-color: #fff; */
     box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 }
 
@@ -344,7 +359,6 @@ table td {
     padding: 10px 0px;
     height: 20px;
 }
-
 
 /* cart page css */
 .CartSection {

@@ -3,14 +3,14 @@
         width: 55%;
     }
 
-    #mainSection,.slider{
+    #mainSection,
+    .slider {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         width: 100%;
     }
-    
-    #mainSection
-    {
+
+    #mainSection {
         margin-top: 20%;
     }
 
@@ -19,7 +19,8 @@
 
     }
 
-    .women_pro,.men_pro {
+    .women_pro,
+    .men_pro {
         margin-top: 38%;
     }
 
@@ -46,13 +47,15 @@
 }
 
 @media(min-width:576px) and (max-width:767px) {
-    #mainSection,.slider {
+
+    #mainSection,
+    .slider {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         width: 100%;
     }
-    #mainSection
-    {
+
+    #mainSection {
         margin-top: 32%;
     }
 
@@ -82,14 +85,16 @@
 }
 
 @media(min-width:768px) and (max-width:991px) {
-    #mainSection,.slider {
-      
+
+    #mainSection,
+    .slider {
+
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         width: 100%;
     }
-    #mainSection
-    {
+
+    #mainSection {
         margin-top: 24%;
     }
 
@@ -125,10 +130,11 @@
         grid-template-columns: repeat(4, 1fr);
         width: 100%;
     }
-#mainSection
-{
-    margin-top: 25%;
-}
+
+    #mainSection {
+        margin-top: 25%;
+    }
+
     .product_data {
         margin-top: 15%;
     }
@@ -157,17 +163,18 @@
 @media(min-width:1201px) and (max-width:1400px) {
 
     #mainSection,
-    #mainSectionmen{
+    #mainSectionmen {
         margin-top: 17%;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         width: 100%;
     }
-    .slider
-    {
+
+    .slider {
         display: grid;
-        grid-template-columns: repeat(4,1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
+
     .product_data {
         margin-top: 10%;
     }

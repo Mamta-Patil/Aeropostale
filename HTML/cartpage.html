@@ -53,7 +53,7 @@
                     </ul>
                 </div>
                 <div class="col-4 text-center pe-2">
-                    <h3 class="pe-5">Aeropostal</h3>
+                    <h4 class="pe-5">AEROPOSTALE</h4>
                 </div>
                 <div class="col-4 d-flex justify-content-end icons pt-2">
                     <input type="text" name="" id="serchbar">
@@ -83,7 +83,7 @@
                 <i class="bi bi-list menu" style="font-size: 35px; font-weight: bold;"></i>
             </div>
             <div class="col-8 text-center">
-                <img src="../assetsvideo/Aeropostale-logo.png" alt="" height="60px" width="200px">
+                <h3 class="pt-2"> Aeropostale</h3>
             </div>
             <div class="col-2 text-center pt-1 d-flex justify-content-end">
                 <li class="pt-1">
@@ -99,11 +99,11 @@
 
         <div class="slidebar">
             <ul class="ps-3">
-                <li><a href="woman.html" class="nav-link pt-1 ps-0 text-dark">Woman</a></li>
-                <li><a href="man.html" class="nav-link pt-1 ps-0 text-dark">Man</a></li>
-                <li><a href="" class="nav-link pt-1 ps-0 text-dark">Jeans</a></li>
-                <li><a href="" class="nav-link pt-1 ps-0 text-dark">Aero for All </a></li>
-                <li><a href="" class="nav-link pt-1 ps-0 text-dark d-none">Clearance</a></li>
+                <li><a href="woman.html" class="nav-link pt-1 ps-0">Woman</a></li>
+                <li><a href="man.html" class="nav-link pt-1 ps-0">Man</a></li>
+                <li><a href="" class="nav-link pt-1 ps-0">Jeans</a></li>
+                <li><a href="" class="nav-link pt-1 ps-0">Aero for All </a></li>
+                <li><a href="" class="nav-link pt-1 ps-0 d-none">Clearance</a></li>
             </ul>
             <div class="user_info">
                 <a href="login.html" class="nav-link
@@ -225,7 +225,7 @@
 
     // Cart
     function Quantity_product() {
-        fetch("http://localhost:3000/cartData")
+        fetch("https://aeropostale-backend-1.onrender.com/cartData")
             .then((res) => res.json())
             .then((data) => {
                 console.log(data.length)
@@ -243,7 +243,7 @@
 
     // Fetch Data
     function fetchdata() {
-        fetch("http://localhost:3000/cartData")
+        fetch("https://aeropostale-backend-1.onrender.com/cartData")
             .then((res) => res.json())
             .then((data) => {
                 datalist(data)
@@ -266,17 +266,15 @@
                     <img src="${Image1}" alt="" height="150px" width:"150px" class="pt-3">
                 </div>
                 <div class=" col-8 m-0">
-                    <p class="text-dark">${title}</p>
-                    <p class="text-dark">${discription}</p>
-                    <p class="text-dark">$${price}</p>
-                    <i class="deleteButton text-dark bi bi-trash " data-id="${id}"></i>
+                    <p class="">${title}</p>
+                    <p class="">${discription}</p>
+                    <p class="">$${price}</p>
+                    <i class="deleteButton  bi bi-trash " data-id="${id}"></i>
                 </div>
             </div>  
     `
         return data;
     }
-
-
 
     // Delete cart from cartpage
     document.addEventListener("click", (el) => {
@@ -287,7 +285,7 @@
 
 
     function Deleteproduct(id) {
-        fetch(`http://localhost:3000/cartData/${id}`, {
+        fetch(`https://aeropostale-backend-1.onrender.com/cartData${id}`, {
             "method": "DELETE"
         })
             .then((res) => res.json())
@@ -298,7 +296,6 @@
             })
             .catch((err) => console.log(err))
     }
-
 
     // calculate total price
     function calculateTotalPrice(data) {
