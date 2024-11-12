@@ -4,32 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form</title>
+    <title>Woman Products</title>
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
     <!-- css link -->
-    <link rel="stylesheet" href="/STYLE/login.css">
-    <link rel="stylesheet" href="/STYLE/style.css">
-    <link rel="stylesheet" href="/STYLE/media.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="woman.css">
+    <link rel="stylesheet" href="media.css">
 
-    <!-- Botstrap link -->
+    <!-- Bootstrap link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
-    <!-- jquery cdn -->
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-
-
     <!-- bootstrap icon link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
 
 </head>
 
 <body>
+
     <!-- navbar -->
     <div class="navbar position-fixed d-lg-block d-none">
         <div class="container-fluid">
@@ -113,36 +112,24 @@
         </div>
     </section>
 
-    <!-- Form Section -->
-    <section class="main">
-        <div class="row m-0 mt-5">
-            <div class="col-lg-6 m-auto" id="login_form">
-                <form action="" id="login-form">
-                    <h3>Create Account</h3>
-                    <input type="text" placeholder="First Name" class="input" id="firstName"><br>
-                    <span id="firstNameError"></span><br>
-                    <input type="text" placeholder="Last Name" class="input" id="lastName"><br>
-                    <span id="lastNameError"></span><br>
-                    <input type="email" placeholder="Email" class="input" id="email"><br>
-                    <span id="emailError"></span><br>
-                    <input type="email" placeholder="Confirm Email" class="input" id="confEmail"> <br>
-                    <span id="confEmailError"></span><br>
-                    <input type="password" placeholder="password" class="input" id="password"><br>
-                    <span id="PasswordError"></span><br>
-                    <input type="password" placeholder="Confirm password" class="input" id="conPassword"><br>
-                    <span id="conPasswordError"></span><br>
-
-                    <div class="checkbox_content d-flex mt-4">
-                        <input type="checkbox" width="50%" class="checkbox">
-                        <p class="ps-2">Please add me to Aeropostale's email list. Aeropostale does not share or sell
-                            personal info.
-                        </p>
-                    </div>
-                    <button class="btn">Apply</button>
-                </form>
+    <!-- Soarted By -->
+    <section class="soart-product d-flex justify-content-end">
+        <div class="soart-box">
+            <div class="soart-btn">
+                <a href="" class="text-dark">soarted by &nbsp;&nbsp;&nbsp;<i class="bi bi-arrow-down-up"></i> </a>
+            </div>
+            <div class="soart-by">
+                <button id="high-to-low">High to low</button> <br>
+                <button id="low-to-high">low to high</button>
             </div>
         </div>
     </section>
+
+    <!-- product section -->
+    <div class="women_pro">
+        <div class="container-fluid " id="mainSection">
+        </div>
+    </div>
 
     <!-- footer -->
     <section class="footer py-5">
@@ -229,35 +216,44 @@
         </div>
     </section>
 
-    <script src="/login.js"></script>
-    <script src="/script.js"></script>
+
+    <script src="script.js"></script>
 
 </body>
+
 <script>
     function fetchdata() {
         fetch("https://aeropostale-backend-1.onrender.com/cartData")
             .then((res) => res.json())
             .then((data) => {
-                console.log(data.length)
                 document.querySelector(".totalCart").innerHTML = data.length
             })
             .catch((err) => console.log(err))
     }
     fetchdata()
-    
+
+
     //media icon 
     function Quantity_product() {
         fetch("https://aeropostale-backend-1.onrender.com/cartData")
             .then((res) => res.json())
             .then((data) => {
-                console.log(data.length)
                 document.querySelector(".totalCarts").innerHTML = data.length
+                fetchdata()
             })
             .catch((err) => console.log(err))
     }
     Quantity_product()
 
 
+    // soarted by
+    $(document).ready(function () {
+        $(".soart-by").hide();
+        $(".soart-btn").click(function (e) {
+            e.preventDefault()
+            $(".soart-by").slideToggle()
+        })
+    })
 
 
 </script>

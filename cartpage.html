@@ -2,18 +2,10 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Woman Products</title>
-
-    <!-- jquery cdn -->
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-
-    <!-- css link -->
-    <link rel="stylesheet" href="/STYLE/style.css">
-    <link rel="stylesheet" href="/STYLE/woman.css">
-    <link rel="stylesheet" href="/STYLE/media.css">
+    <title>Cartpage</title>
 
     <!-- Bootstrap link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -24,6 +16,15 @@
 
     <!-- bootstrap icon link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="woman.css">
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
 </head>
 
@@ -88,7 +89,7 @@
                 <li class="pt-1">
                     <i class="bi bi-mask" style="font-size: 22px;font-weight: bold;" onclick="Darkmode()"></i>
                 </li>
-                <a href="cartpage.html"><span class="totalCarts">0</span><i class="bagIcon bi bi-bag"
+                <a href="cartpage.html"><span class="totalCarts">0</span><i class="bi bi-bag bagIcon"
                         style="font-size: 25px;font-weight: bold;"></i></a>
             </div>
         </div>
@@ -102,7 +103,7 @@
                 <li><a href="man.html" class="nav-link pt-1 ps-0">Man</a></li>
                 <li><a href="" class="nav-link pt-1 ps-0">Jeans</a></li>
                 <li><a href="" class="nav-link pt-1 ps-0">Aero for All </a></li>
-                <li><a href="" class="nav-link pt-1 ps-0">Clearance</a></li>
+                <li><a href="" class="nav-link pt-1 ps-0 d-none">Clearance</a></li>
             </ul>
             <div class="user_info">
                 <a href="login.html" class="nav-link
@@ -112,22 +113,20 @@
         </div>
     </section>
 
-    <!-- Soarted By -->
-    <section class="soart-product d-flex justify-content-end">
-        <div class="soart-box">
-            <div class="soart-btn">
-                <a href="" class="text-dark">soarted by &nbsp;&nbsp;&nbsp;<i class="bi bi-arrow-down-up"></i> </a>
-            </div>
-            <div class="soart-by">
-                <button id="high-to-low">High to low</button> <br>
-                <button id="low-to-high">low to high</button>
-            </div>
+    <!-- carts added by you -->
+    <div class="cart">
+        <div id="mainSection">
         </div>
-    </section>
+    </div>
 
-    <!-- product section -->
-    <div class="women_pro">
-        <div class="container-fluid " id="mainSection">
+    <div class="row m-0">
+        <p>Shopping Bag </p>
+        <h4 class="bag_info"></h4>
+        <div class="col-lg-8 CartSection">
+
+        </div>
+        <div class="col-lg-4 col-12 price">
+
         </div>
     </div>
 
@@ -216,46 +215,141 @@
         </div>
     </section>
 
-
-    <script src="../script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
+</html>
+
 <script>
-    function fetchdata() {
-        fetch("https://aeropostale-backend-1.onrender.com/cartData")
-            .then((res) => res.json())
-            .then((data) => {
-                document.querySelector(".totalCart").innerHTML = data.length
-            })
-            .catch((err) => console.log(err))
-    }
-    fetchdata()
 
-
-    //media icon 
+    // Cart
     function Quantity_product() {
         fetch("https://aeropostale-backend-1.onrender.com/cartData")
             .then((res) => res.json())
             .then((data) => {
+                console.log(data.length)
                 document.querySelector(".totalCarts").innerHTML = data.length
-                fetchdata()
+                if (data.length === 0) {
+                    document.querySelector(".bag_info").innerHTML = "Your shoping bag is empty"
+                }
+                else {
+                    console.log(err)
+                }
             })
             .catch((err) => console.log(err))
     }
     Quantity_product()
 
+    // Fetch Data
+    function fetchdata() {
+        fetch("https://aeropostale-backend-1.onrender.com/cartData")
+            .then((res) => res.json())
+            .then((data) => {
+                datalist(data)
+                document.querySelector(".totalCart").innerHTML = data.length;
+                calculateTotalPrice(data)
+            })
+            .catch((err) => console.log(err))
+    }
+    fetchdata()
 
-    // soarted by
-    $(document).ready(function () {
-        $(".soart-by").hide();
-        $(".soart-btn").click(function (e) {
-            e.preventDefault()
-            $(".soart-by").slideToggle()
-        })
+    function datalist(data) {
+        let storedata = data.map((el) => singledata(el.Image1, el.id, el.title, el.discription, el.price))
+        document.querySelector(".CartSection").innerHTML = storedata.join("")
+    }
+
+    function singledata(Image1, id, title, discription, price) {
+        let data = `
+            <div class="row  addPro" data-id="${id}">
+                <div class=" col-4 text-center mt-2">
+                    <img src="${Image1}" alt="" height="150px" width:"150px" class="pt-3">
+                </div>
+                <div class=" col-8 m-0">
+                    <p class="">${title}</p>
+                    <p class="">${discription}</p>
+                    <p class="">$${price}</p>
+                    <i class="deleteButton  bi bi-trash " data-id="${id}"></i>
+                </div>
+            </div>  
+    `
+        return data;
+    }
+
+    // Delete cart from cartpage
+    document.addEventListener("click", (el) => {
+        if (el.target.classList.contains("deleteButton")) {
+            Deleteproduct(el.target.dataset.id)
+        }
     })
 
 
-</script>
+    function Deleteproduct(id) {
+        fetch(`https://aeropostale-backend-1.onrender.com/cartData${id}`, {
+            "method": "DELETE"
+        })
+            .then((res) => res.json())
+            .then((data) => {
 
-</html>
+                alert("Remove Product?  Are you sure you want to remove this product from your shopping bag? ")
+                fetchdata()
+            })
+            .catch((err) => console.log(err))
+    }
+
+    // calculate total price
+    function calculateTotalPrice(data) {
+        let totalprice = data.reduce((acc, item) => acc + parseFloat(item.price), 0)
+        let title = data.map((item) => item.discription + `<br />`).join("")
+        let price = data.map((item) => `$` + parseFloat(item.price) + `<br />`).join("")
+        console.log(title)
+        console.log(price)
+        document.querySelector(".price").innerHTML = `
+        <div class="price col-l2">  
+        <table style="margin:auto;" class="Estimated">
+               <tr style="">
+                <td class="p-2">
+                  <h6 class="m-0">Order Summary</h6>                  
+                </td>
+              </tr>
+              <tr style="">
+                <td class="p-2 pe-0">
+                    <hr  class="m-0 w-100" />      
+                    <p class="m-0">  Name  </p>  
+                    <hr  class="m-0 w-100" />   
+                 </td>
+                 <td class="p-2 ps-0">
+                    <hr  class="m-0 w-100" />   
+                    <p class="m-0">  Price   </p>
+                    <hr  class="m-0 w-100" />   
+                 </td>
+              </tr>
+              <tr style="">
+                <td class="p-2">
+                   ${title}
+                </td>
+                <td class="p-2">
+                   ${price}
+                </td>
+              </tr>
+              <tr style="color:red">
+                <td class="p-2 pe-0">
+                    <hr  class="m-0 w-100 pe-0" />   
+                     Estimated Total
+                    <hr  class="m-0 w-100 pe-0" />   
+                </td>
+                <td style="color:red" class="p-2 ps-0">
+                    <hr  class="m-0 w-100 ps-0" />   
+                $${totalprice.toFixed(2)}
+                    <hr  class="m-0 w-100 ps-0" />   
+                </td>
+              </tr>
+              <tr style="">
+                <td class="p-2">4 interest-free payments of $18.72 with Klarna. Learn More </td>    
+              </tr>
+    </table>
+        </div>
+    `
+    }
+
+</script>

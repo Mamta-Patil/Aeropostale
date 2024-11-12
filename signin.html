@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Description Page</title>
-    
-    <!-- discription css -->
-    <link rel="stylesheet" href="/STYLE/style.css">
-    <link rel="stylesheet" href="/STYLE//discription.css">
-    <link rel="stylesheet" href="/STYLE/media.css">
+    <title>Signin Page</title>
 
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <!-- css link -->
+    <link rel="stylesheet" href="signin.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
 
     <!-- Botstrap link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -18,13 +21,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
         </script>
-    <!-- bootstrp icon link -->
+
+    <!-- bootstrap icon link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-    <!-- jquery cdn -->
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-
 
 </head>
 
@@ -54,6 +53,7 @@
                 </div>
                 <div class="col-4 text-center pe-2">
                     <h4 class="pe-5">AEROPOSTALE</h4>
+                </div>
                 <div class="col-4 d-flex justify-content-end icons pt-2">
                     <input type="text" name="" id="serchbar">
                     <ul class="d-flex nav_icons">
@@ -75,7 +75,6 @@
         </div>
     </div>
 
-
     <!-- navbar for media query -->
     <section class="navigationbar d-lg-none d-block">
         <div class="row" style="width: 100%;">
@@ -96,7 +95,6 @@
         <div class="col-12 text-center p-0">
             <input type="search" id="find_product" placeholder="Search">
         </div>
-
         <div class="slidebar">
             <ul class="ps-3">
                 <li><a href="woman.html" class="nav-link pt-1 ps-0">Woman</a></li>
@@ -107,59 +105,26 @@
             </ul>
             <div class="user_info">
                 <a href="login.html" class="nav-link
-                 text-dark">Create Account</a>
+                     text-dark">Create Account</a>
                 <a href="signin.html" class="nav-link text-dark">Sign IN</a>
             </div>
         </div>
     </section>
 
-
-    <!-- Discription of Data -->
-    <div class="container-fluid product_data mt-5">
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="row">
-                    <div class="col-lg-12 p-1">
-                        <img src="https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dwd3974e0a/80111101_047_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg"
-                            alt="" class="img-fluid w-100 " id="image1">
+    <!-- signin form -->
+    <div class="row m-0">
+        <div class="col-lg-6 m-auto">
+            <div class="signin" id="signup_form">
+                <form action="" class="">
+                    <h2>Sign in</h2>
+                    <input type="email" placeholder="Email Address" class="input" id="email"> <br>
+                    <input type="password" placeholder="Password" class="input" id="password"><br>
+                    <div class="checkbox d-flex">
+                        <input type="checkbox" class="remember_me mt-2">
+                        <p class="ps-2 pt-2">Remember Me</p>
                     </div>
-                    <div class="col-lg-12 p-1">
-                        <img src="https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dwb57b5f6d/80111101_047_alt2.jpg?sw=478&sh=557&sm=fit&sfrm=jpg"
-                            alt="" class="img-fluid w-100 " id="image2">
-                    </div>
-                </div>  
-            </div>
-            <div class="col-lg-4">
-                <div class="row">
-                    <div class="col-lg-12 p-1">
-                        <img src="https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw2976d229/80111101_047_alt1.jpg?sw=478&sh=557&sm=fit&sfrm=jpg "
-                            alt="" class="img-fluid w-100" id="image3">
-                    </div>
-                    <div class="col-lg-12 p-1">
-                        <img src="https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw758945d6/80111101_047_alt3.jpg?sw=478&sh=557&sm=fit&sfrm=jpg"
-                            alt="" class="img-fluid w-100 " id="image4">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 img-fluid pro_discription">
-                <a href="" class="nav-link py-1 ps-0">
-                    <!-- <h6>Woman</h6> -->
-                </a>
-                <h5 id="title" style="color: red;" class="py-1"></h5>
-                <h5 id="discription" class="py-1"></h5>
-                <h5 id="price" class="py-1">$</h5>
-                <h6 class="pt-3">Size: Select Size </h6>
-                <div class="sizeInfo">
-                    <span><a href="">XS</a></span>
-                    <span><a href="">S</a></span>
-                    <span><a href="">M</a></span>
-                    <span><a href="">L</a></span>
-                    <span><a href="">XL</a></span>
-                    <span><a href="">XLL</a></span>
-                </div>
-                <button id="addtocart" class="addCart my-5">Add To Cart</button>
-
+                    <button class="btn">Sign in</button>
+                </form>
             </div>
         </div>
     </div>
@@ -250,14 +215,10 @@
     </section>
 
 
-
-    <script src="../script.js"></script>
-
+    <script src="signin.js"></script>
+    <script src="script.js"></script>
 </body>
-
-
 <script>
-
     function fetchdata() {
         fetch("https://aeropostale-backend-1.onrender.com/cartData")
             .then((res) => res.json())
@@ -280,46 +241,6 @@
             .catch((err) => console.log(err))
     }
     Quantity_product()
-
-   // Description Page
-    const param = new URLSearchParams(window.location.search)
-    window.addEventListener("load", () => {
-        document.querySelector("#image1").src = param.get("image1")
-        document.querySelector("#image2").src = param.get("image2")
-        document.querySelector("#image3").src = param.get("image3")
-        document.querySelector("#image4").src = param.get("image4")
-
-        document.querySelector("#title").innerText = param.get("title")
-        document.querySelector("#discription").innerText = param.get("discription")
-        document.querySelector("#price").innerText = '$'+ param.get("price")
-
-        document.querySelector("#addtocart").addEventListener("click", () => {
-            let cartdata = {
-                Image1: param.get("image1"),
-                Image2: param.get("image2"),
-                Image3: param.get("image3"),
-                Image4: param.get("image4"),
-                title: param.get("title"),
-                discription: param.get("discription"),
-                price: param.get("price"),
-
-            }
-
-            fetch("https://aeropostale-backend-1.onrender.com/cartData", {
-                "method": "POST",
-                "headers": {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(cartdata)
-            })
-                .then((res) => res.json())
-                .then((data) => {
-                    document.querySelector(".totalCart").innerHTML = data.length;
-                    fetchdata()
-                })
-                .catch((err) => console.log(err))
-        })
-    })
 
 </script>
 

@@ -2,29 +2,29 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cartpage</title>
+    <title>Description Page</title>
+    
+    <!-- discription css -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="description.css">
+    <link rel="stylesheet" href="media.css">
 
-    <!-- Bootstrap link -->
+
+    <!-- Botstrap link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-
-    <!-- bootstrap icon link -->
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <!-- bootstrp icon link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-    <!-- css link -->
-    <link rel="stylesheet" href="/STYLE/style.css">
-    <link rel="stylesheet" href="/STYLE/media.css">
-    <link rel="stylesheet" href="/STYLE/woman.css">
 
     <!-- jquery cdn -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
 
 </head>
 
@@ -54,7 +54,6 @@
                 </div>
                 <div class="col-4 text-center pe-2">
                     <h4 class="pe-5">AEROPOSTALE</h4>
-                </div>
                 <div class="col-4 d-flex justify-content-end icons pt-2">
                     <input type="text" name="" id="serchbar">
                     <ul class="d-flex nav_icons">
@@ -75,6 +74,7 @@
             </div>
         </div>
     </div>
+
 
     <!-- navbar for media query -->
     <section class="navigationbar d-lg-none d-block">
@@ -103,7 +103,7 @@
                 <li><a href="man.html" class="nav-link pt-1 ps-0">Man</a></li>
                 <li><a href="" class="nav-link pt-1 ps-0">Jeans</a></li>
                 <li><a href="" class="nav-link pt-1 ps-0">Aero for All </a></li>
-                <li><a href="" class="nav-link pt-1 ps-0 d-none">Clearance</a></li>
+                <li><a href="" class="nav-link pt-1 ps-0">Clearance</a></li>
             </ul>
             <div class="user_info">
                 <a href="login.html" class="nav-link
@@ -113,20 +113,54 @@
         </div>
     </section>
 
-    <!-- carts added by you -->
-    <div class="cart">
-        <div id="mainSection">
-        </div>
-    </div>
 
-    <div class="row m-0">
-        <p>Shopping Bag </p>
-        <h4 class="bag_info"></h4>
-        <div class="col-lg-8 CartSection">
+    <!-- Discription of Data -->
+    <div class="container-fluid product_data mt-5">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="row">
+                    <div class="col-lg-12 p-1">
+                        <img src="https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dwd3974e0a/80111101_047_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg"
+                            alt="" class="img-fluid w-100 " id="image1">
+                    </div>
+                    <div class="col-lg-12 p-1">
+                        <img src="https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dwb57b5f6d/80111101_047_alt2.jpg?sw=478&sh=557&sm=fit&sfrm=jpg"
+                            alt="" class="img-fluid w-100 " id="image2">
+                    </div>
+                </div>  
+            </div>
+            <div class="col-lg-4">
+                <div class="row">
+                    <div class="col-lg-12 p-1">
+                        <img src="https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw2976d229/80111101_047_alt1.jpg?sw=478&sh=557&sm=fit&sfrm=jpg "
+                            alt="" class="img-fluid w-100" id="image3">
+                    </div>
+                    <div class="col-lg-12 p-1">
+                        <img src="https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw758945d6/80111101_047_alt3.jpg?sw=478&sh=557&sm=fit&sfrm=jpg"
+                            alt="" class="img-fluid w-100 " id="image4">
+                    </div>
+                </div>
+            </div>
 
-        </div>
-        <div class="col-lg-4 col-12 price">
+            <div class="col-lg-4 img-fluid pro_discription">
+                <a href="" class="nav-link py-1 ps-0">
+                    <!-- <h6>Woman</h6> -->
+                </a>
+                <h5 id="title" style="color: red;" class="py-1"></h5>
+                <h5 id="discription" class="py-1"></h5>
+                <h5 id="price" class="py-1">$</h5>
+                <h6 class="pt-3">Size: Select Size </h6>
+                <div class="sizeInfo">
+                    <span><a href="">XS</a></span>
+                    <span><a href="">S</a></span>
+                    <span><a href="">M</a></span>
+                    <span><a href="">L</a></span>
+                    <span><a href="">XL</a></span>
+                    <span><a href="">XLL</a></span>
+                </div>
+                <button id="addtocart" class="addCart my-5">Add To Cart</button>
 
+            </div>
         </div>
     </div>
 
@@ -215,141 +249,78 @@
         </div>
     </section>
 
-    <script src="../script.js"></script>
+
+
+    <script src="script.js"></script>
 
 </body>
 
-</html>
 
 <script>
 
-    // Cart
+    function fetchdata() {
+        fetch("https://aeropostale-backend-1.onrender.com/cartData")
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data.length)
+                document.querySelector(".totalCart").innerHTML = data.length
+            })
+            .catch((err) => console.log(err))
+    }
+    fetchdata()
+
+    //media icon 
     function Quantity_product() {
         fetch("https://aeropostale-backend-1.onrender.com/cartData")
             .then((res) => res.json())
             .then((data) => {
                 console.log(data.length)
                 document.querySelector(".totalCarts").innerHTML = data.length
-                if (data.length === 0) {
-                    document.querySelector(".bag_info").innerHTML = "Your shoping bag is empty"
-                }
-                else {
-                    console.log(err)
-                }
             })
             .catch((err) => console.log(err))
     }
     Quantity_product()
 
-    // Fetch Data
-    function fetchdata() {
-        fetch("https://aeropostale-backend-1.onrender.com/cartData")
-            .then((res) => res.json())
-            .then((data) => {
-                datalist(data)
-                document.querySelector(".totalCart").innerHTML = data.length;
-                calculateTotalPrice(data)
+   // Description Page
+    const param = new URLSearchParams(window.location.search)
+    window.addEventListener("load", () => {
+        document.querySelector("#image1").src = param.get("image1")
+        document.querySelector("#image2").src = param.get("image2")
+        document.querySelector("#image3").src = param.get("image3")
+        document.querySelector("#image4").src = param.get("image4")
+
+        document.querySelector("#title").innerText = param.get("title")
+        document.querySelector("#discription").innerText = param.get("discription")
+        document.querySelector("#price").innerText = '$'+ param.get("price")
+
+        document.querySelector("#addtocart").addEventListener("click", () => {
+            let cartdata = {
+                Image1: param.get("image1"),
+                Image2: param.get("image2"),
+                Image3: param.get("image3"),
+                Image4: param.get("image4"),
+                title: param.get("title"),
+                discription: param.get("discription"),
+                price: param.get("price"),
+
+            }
+
+            fetch("https://aeropostale-backend-1.onrender.com/cartData", {
+                "method": "POST",
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(cartdata)
             })
-            .catch((err) => console.log(err))
-    }
-    fetchdata()
-
-    function datalist(data) {
-        let storedata = data.map((el) => singledata(el.Image1, el.id, el.title, el.discription, el.price))
-        document.querySelector(".CartSection").innerHTML = storedata.join("")
-    }
-
-    function singledata(Image1, id, title, discription, price) {
-        let data = `
-            <div class="row  addPro" data-id="${id}">
-                <div class=" col-4 text-center mt-2">
-                    <img src="${Image1}" alt="" height="150px" width:"150px" class="pt-3">
-                </div>
-                <div class=" col-8 m-0">
-                    <p class="">${title}</p>
-                    <p class="">${discription}</p>
-                    <p class="">$${price}</p>
-                    <i class="deleteButton  bi bi-trash " data-id="${id}"></i>
-                </div>
-            </div>  
-    `
-        return data;
-    }
-
-    // Delete cart from cartpage
-    document.addEventListener("click", (el) => {
-        if (el.target.classList.contains("deleteButton")) {
-            Deleteproduct(el.target.dataset.id)
-        }
+                .then((res) => res.json())
+                .then((data) => {
+                    document.querySelector(".totalCart").innerHTML = data.length;
+                    fetchdata()
+                })
+                .catch((err) => console.log(err))
+        })
     })
 
-
-    function Deleteproduct(id) {
-        fetch(`https://aeropostale-backend-1.onrender.com/cartData${id}`, {
-            "method": "DELETE"
-        })
-            .then((res) => res.json())
-            .then((data) => {
-
-                alert("Remove Product?  Are you sure you want to remove this product from your shopping bag? ")
-                fetchdata()
-            })
-            .catch((err) => console.log(err))
-    }
-
-    // calculate total price
-    function calculateTotalPrice(data) {
-        let totalprice = data.reduce((acc, item) => acc + parseFloat(item.price), 0)
-        let title = data.map((item) => item.discription + `<br />`).join("")
-        let price = data.map((item) => `$` + parseFloat(item.price) + `<br />`).join("")
-        console.log(title)
-        console.log(price)
-        document.querySelector(".price").innerHTML = `
-        <div class="price col-l2">  
-        <table style="margin:auto;" class="Estimated">
-               <tr style="">
-                <td class="p-2">
-                  <h6 class="m-0">Order Summary</h6>                  
-                </td>
-              </tr>
-              <tr style="">
-                <td class="p-2 pe-0">
-                    <hr  class="m-0 w-100" />      
-                    <p class="m-0">  Name  </p>  
-                    <hr  class="m-0 w-100" />   
-                 </td>
-                 <td class="p-2 ps-0">
-                    <hr  class="m-0 w-100" />   
-                    <p class="m-0">  Price   </p>
-                    <hr  class="m-0 w-100" />   
-                 </td>
-              </tr>
-              <tr style="">
-                <td class="p-2">
-                   ${title}
-                </td>
-                <td class="p-2">
-                   ${price}
-                </td>
-              </tr>
-              <tr style="color:red">
-                <td class="p-2 pe-0">
-                    <hr  class="m-0 w-100 pe-0" />   
-                     Estimated Total
-                    <hr  class="m-0 w-100 pe-0" />   
-                </td>
-                <td style="color:red" class="p-2 ps-0">
-                    <hr  class="m-0 w-100 ps-0" />   
-                $${totalprice.toFixed(2)}
-                    <hr  class="m-0 w-100 ps-0" />   
-                </td>
-              </tr>
-              <tr style="">
-                <td class="p-2">4 interest-free payments of $18.72 with Klarna. Learn More </td>    
-              </tr>
-    </table>
-        </div>
-    `
-    }
-
 </script>
+
+</html>
