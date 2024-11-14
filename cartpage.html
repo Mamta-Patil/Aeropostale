@@ -285,7 +285,7 @@
 
 
     function Deleteproduct(id) {
-        fetch(`https://aeropostale-backend-1.onrender.com/cartData${id}`, {
+        fetch(`https://aeropostale-backend-1.onrender.com/cartData/${id}`, {
             "method": "DELETE"
         })
             .then((res) => res.json())
@@ -293,6 +293,7 @@
 
                 alert("Remove Product?  Are you sure you want to remove this product from your shopping bag? ")
                 fetchdata()
+                console.log(data)
             })
             .catch((err) => console.log(err))
     }
@@ -302,8 +303,6 @@
         let totalprice = data.reduce((acc, item) => acc + parseFloat(item.price), 0)
         let title = data.map((item) => item.discription + `<br />`).join("")
         let price = data.map((item) => `$` + parseFloat(item.price) + `<br />`).join("")
-        console.log(title)
-        console.log(price)
         document.querySelector(".price").innerHTML = `
         <div class="price col-l2">  
         <table style="margin:auto;" class="Estimated">
