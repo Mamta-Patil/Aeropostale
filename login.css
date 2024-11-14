@@ -5,12 +5,12 @@
 
  #login_form
  {
-    padding-top: 10%;
+    padding-top: 12%;
  }
 
 .main .input {
     height: 45px;
-    width: 70%;
+    width: 90%;
     border-radius: 10px;
     margin-top: 20px;   
     outline: none;
