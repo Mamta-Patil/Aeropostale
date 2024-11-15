@@ -16,6 +16,6 @@ signup_form.addEventListener("submit", (e) => {
         alert("Login Successfully")
     }
     else {
-        alert("First create your account")
+        alert("No account found with this email. First create an account with Aeropostale.")
     }
 })

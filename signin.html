@@ -104,9 +104,8 @@
                 <li><a href="" class="nav-link pt-1 ps-0">Clearance</a></li>
             </ul>
             <div class="user_info">
-                <a href="login.html" class="nav-link
-                     text-dark">Create Account</a>
-                <a href="signin.html" class="nav-link text-dark">Sign IN</a>
+                <a href="login.html" class="nav-link">Create Account</a>
+                <a href="signin.html" class="nav-link">Sign IN</a>
             </div>
         </div>
     </section>
@@ -214,11 +213,12 @@
         </div>
     </section>
 
-
     <script src="signin.js"></script>
     <script src="script.js"></script>
+
 </body>
 <script>
+    
     function fetchdata() {
         fetch("https://aeropostale-backend-1.onrender.com/cartData")
             .then((res) => res.json())

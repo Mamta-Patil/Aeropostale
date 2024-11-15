@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Description Page</title>
-    
+
     <!-- discription css -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="description.css">
@@ -29,121 +29,117 @@
 </head>
 
 <body>
- <!-- navbar -->
- <div class="navbar position-fixed d-lg-block d-none">
-    <div class="container-fluid">
-        <div class="row w-100 py-3" style="align-items:center;">
-            <div class="col-4 p-0  d-none d-sm-block">
-                <ul class="d-flex p-0  m-0">
-                    <li class="nav-item " style="list-style: none;"><a href="woman.html"
-                            class="nav-link ps-2 pt-0 ">Woman</a>
-                    </li>
-                    <li class="nav-item" style="list-style: none;"><a href="man.html"
-                            class="nav-link ps-2 pt-0 ">Man</a>
-                    </li>
-                    <li class="nav-item" style="list-style: none;"><a href="" class="nav-link ps-2 pt-0">Jeans</a>
-                    </li>
-                    <li class="nav-item" style="list-style: none;"><a href="" class="nav-link ps-2 pt-0">Aero for
-                            all</a>
-                    </li>
-                    <li class="nav-item" style="list-style: none;"><a href=""
-                            class="nav-link ps-2 pt-0 d-none">Clearance</a>
-                    </li>
-                </ul>
+    <!-- navbar -->
+    <div class="navbar position-fixed d-lg-block d-none">
+        <div class="container-fluid">
+            <div class="row w-100 py-3" style="align-items:center;">
+                <div class="col-4 p-0  d-none d-sm-block">
+                    <ul class="d-flex p-0  m-0">
+                        <li class="nav-item " style="list-style: none;"><a href="woman.html"
+                                class="nav-link ps-2 pt-0 ">Woman</a>
+                        </li>
+                        <li class="nav-item" style="list-style: none;"><a href="man.html"
+                                class="nav-link ps-2 pt-0 ">Man</a>
+                        </li>
+                        <li class="nav-item" style="list-style: none;"><a href="" class="nav-link ps-2 pt-0">Jeans</a>
+                        </li>
+                        <li class="nav-item" style="list-style: none;"><a href="" class="nav-link ps-2 pt-0">Aero for
+                                all</a>
+                        </li>
+                        <li class="nav-item" style="list-style: none;"><a href=""
+                                class="nav-link ps-2 pt-0 d-none">Clearance</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-4 text-center pe-2">
+                    <h4 class="pe-5">AEROPOSTALE</h4>
+                </div>
+                <div class="col-4 d-flex justify-content-end icons pt-2">
+                    <input type="text" name="" id="serchbar">
+                    <ul class="d-flex nav_icons">
+                        <li><i class="bi bi-search "></i></li>
+                        <li class="collect_info ps-2"><i class="bi bi-person pe-2"></i>
+                            <ul class="info">
+                                <a href="login.html">Create Account</a>
+                                <a href="signin.html" class="mt-2">Sign In</a>
+                            </ul>
+                        </li>
+                        <li>
+                            <i class="bi bi-mask ps-2" onclick="Darkmode()"></i>
+                        </li>
+                        <li><a href="cartpage.html"><span class="totalCart">0</span><i
+                                    class="bi bi-bag bagIcon"></i></a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-4 text-center pe-2">
-                <h4 class="pe-5">AEROPOSTALE</h4>
-            </div>
-            <div class="col-4 d-flex justify-content-end icons pt-2">
-                <input type="text" name="" id="serchbar">
-                <ul class="d-flex nav_icons">
-                    <li><i class="bi bi-search "></i></li>
-                    <li class="collect_info ps-2"><i class="bi bi-person pe-2"></i>
-                        <ul class="info">
-                            <a href="login.html">Create Account</a>
-                            <a href="signin.html" class="mt-2">Sign In</a>
-                        </ul>
-                    </li>
-                    <li>
-                        <i class="bi bi-mask ps-2" onclick="Darkmode()"></i>
-                    </li>
-                    <li><a href="cartpage.html"><span class="totalCart">0</span><i
-                                class="bi bi-bag bagIcon"></i></a></li>
-                </ul>
-            </div>
         </div>
-    </div>
-</div>
-
-<!-- navbar for media query -->
-<section class="navigationbar d-lg-none d-block">
-    <div class="row" style="width: 100%;">
-        <div class="col-2 text-center">
-            <i class="bi bi-list menu" style="font-size: 35px; font-weight: bold;"></i>
-        </div>
-        <div class="col-8 text-center">
-            <h3 class="pt-2"> Aeropostale</h3>
-        </div>
-        <div class="col-2 text-center pt-1 d-flex justify-content-end">
-            <li class="pt-1">
-                <i class="bi bi-mask" style="font-size: 22px;font-weight: bold;" onclick="Darkmode()"></i>
-            </li>
-            <a href="cartpage.html"><span class="totalCarts">0</span><i class="bi bi-bag bagIcon"
-                    style="font-size: 25px;font-weight: bold;"></i></a>
-        </div>
-    </div>
-    <div class="col-12 text-center p-0">
-        <input type="search" id="find_product" placeholder="Search">
     </div>
 
-    <div class="slidebar">
-        <ul class="ps-3">
-            <li><a href="woman.html" class="nav-link pt-1 ps-0">Woman</a></li>
-            <li><a href="man.html" class="nav-link pt-1 ps-0">Man</a></li>
-            <li><a href="" class="nav-link pt-1 ps-0">Jeans</a></li>
-            <li><a href="" class="nav-link pt-1 ps-0">Aero for All </a></li>
-            <li><a href="" class="nav-link pt-1 ps-0 d-none">Clearance</a></li>
-        </ul>
-        <div class="user_info">
-            <a href="login.html" class="nav-link
-             text-dark">Create Account</a>
-            <a href="signin.html" class="nav-link text-dark">Sign IN</a>
+    <!-- navbar for media query -->
+    <section class="navigationbar d-lg-none d-block">
+        <div class="row" style="width: 100%;">
+            <div class="col-2 text-center">
+                <i class="bi bi-list menu" style="font-size: 35px; font-weight: bold;"></i>
+            </div>
+            <div class="col-8 text-center">
+                <h3 class="pt-2"> Aeropostale</h3>
+            </div>
+            <div class="col-2 text-center pt-1 d-flex justify-content-end">
+                <li class="pt-1">
+                    <i class="bi bi-mask" style="font-size: 22px;font-weight: bold;" onclick="Darkmode()"></i>
+                </li>
+                <a href="cartpage.html"><span class="totalCarts">0</span><i class="bi bi-bag bagIcon"
+                        style="font-size: 25px;font-weight: bold;"></i></a>
+            </div>
         </div>
-    </div>
-</section>
+        <div class="col-12 text-center p-0">
+            <input type="search" id="find_product" placeholder="Search">
+        </div>
+
+        <div class="slidebar">
+            <ul class="ps-3">
+                <li><a href="woman.html" class="nav-link pt-1 ps-0">Woman</a></li>
+                <li><a href="man.html" class="nav-link pt-1 ps-0">Man</a></li>
+                <li><a href="" class="nav-link pt-1 ps-0">Jeans</a></li>
+                <li><a href="" class="nav-link pt-1 ps-0">Aero for All </a></li>
+                <li><a href="" class="nav-link pt-1 ps-0 d-none">Clearance</a></li>
+            </ul>
+            <div class="user_info">
+                <a href="login.html" class="nav-link">Create Account</a>
+                <a href="signin.html" class="nav-link">Sign IN</a>
+            </div>
+        </div>
+    </section>
 
     <!-- Discription of Data -->
-    <div class="container-fluid product_data mt-5">
+    <div class="container-fluid product_data">
         <div class="row">
             <div class="col-lg-4">
                 <div class="row">
                     <div class="col-lg-12 p-1">
-                        <img src="https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dwd3974e0a/80111101_047_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg"
+                        <img src=""
                             alt="" class="img-fluid w-100 " id="image1">
                     </div>
                     <div class="col-lg-12 p-1">
-                        <img src="https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dwb57b5f6d/80111101_047_alt2.jpg?sw=478&sh=557&sm=fit&sfrm=jpg"
+                        <img src=""
                             alt="" class="img-fluid w-100 " id="image2">
                     </div>
-                </div>  
+                </div>
             </div>
             <div class="col-lg-4">
                 <div class="row">
                     <div class="col-lg-12 p-1">
-                        <img src="https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw2976d229/80111101_047_alt1.jpg?sw=478&sh=557&sm=fit&sfrm=jpg "
+                        <img src=""
                             alt="" class="img-fluid w-100" id="image3">
                     </div>
                     <div class="col-lg-12 p-1">
-                        <img src="https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw758945d6/80111101_047_alt3.jpg?sw=478&sh=557&sm=fit&sfrm=jpg"
+                        <img src=""
                             alt="" class="img-fluid w-100 " id="image4">
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-4 img-fluid pro_discription">
-                <a href="" class="nav-link py-1 ps-0">
-                    <!-- <h6>Woman</h6> -->
-                </a>
                 <h5 id="title" style="color: red;" class="py-1"></h5>
                 <h5 id="discription" class="py-1"></h5>
                 <h5 id="price" class="py-1">$</h5>
@@ -161,6 +157,7 @@
             </div>
         </div>
     </div>
+
     <!-- footer -->
     <section class="footer py-5">
         <div class="row m-0">
@@ -268,13 +265,16 @@
             .then((res) => res.json())
             .then((data) => {
                 console.log(data.length)
-                document.querySelector(".totalCarts").innerHTML = data.length
+                // document.querySelector(".totalCarts").innerText = 0
+                // setInterval(() => {
+                    document.querySelector(".totalCarts").innerHTML = data.length
+                // }, 1000);
             })
             .catch((err) => console.log(err))
     }
     Quantity_product()
 
-   // Description Page
+    // Description Page
     const param = new URLSearchParams(window.location.search)
     window.addEventListener("load", () => {
         document.querySelector("#image1").src = param.get("image1")
@@ -284,7 +284,7 @@
 
         document.querySelector("#title").innerText = param.get("title")
         document.querySelector("#discription").innerText = param.get("discription")
-        document.querySelector("#price").innerText = '$'+ param.get("price")
+        document.querySelector("#price").innerText = '$' + param.get("price")
 
         document.querySelector("#addtocart").addEventListener("click", () => {
             let cartdata = {
@@ -295,7 +295,6 @@
                 title: param.get("title"),
                 discription: param.get("discription"),
                 price: param.get("price"),
-
             }
 
             fetch("https://aeropostale-backend-1.onrender.com/cartData", {
@@ -307,8 +306,10 @@
             })
                 .then((res) => res.json())
                 .then((data) => {
-                    document.querySelector(".totalCart").innerHTML = data.length;
                     fetchdata()
+                    // setInterval(() => {
+                        document.querySelector(".totalCarts").innerHTML = data.length
+                    // }, 2000);
                 })
                 .catch((err) => console.log(err))
         })
